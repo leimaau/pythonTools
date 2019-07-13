@@ -62,10 +62,10 @@ for paragraph in lyrics:
 
         prose = re.sub(r'([\u4e00-\u9fa5]+)([0-9A-Za-z-_]+)',r'\1<space>\2',prose)
         
-        s = dealfunc('[0-9A-Za-z]|[-_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,0,1)
+        s = dealfunc('[0-9A-Za-z-]|[_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,0,1)
         out.write(s.replace('<space> ',' ').replace('<space>',' ')+'\n[')
 
-        s2 = dealfunc('[0-9A-Za-z]|[-_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,1,1)
+        s2 = dealfunc('[0-9A-Za-z-]|[_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,1,1)
         out.write(s2.replace('<space> ',' ').replace('<space>',' ')+']\n')
 
 out.close()
