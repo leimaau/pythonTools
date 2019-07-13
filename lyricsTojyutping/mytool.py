@@ -1,6 +1,6 @@
 import re
 
-def  jyutping_to_ipa(inputstr):
+def  jyutping_to_ipa(inputstr,flag):
 
     outputstr = inputstr
 
@@ -53,9 +53,16 @@ def  jyutping_to_ipa(inputstr):
     outputstr = re.sub(r'zy(\d)',r't͡Sɿ\1',outputstr)
     outputstr = re.sub(r'cy(\d)',r't͡Sʰɿ\1',outputstr)
     outputstr = re.sub(r'sy(\d)',r'Sɿ\1',outputstr)
-    outputstr = re.sub('s','ʃ',outputstr)
-    outputstr = re.sub('z','t͡ʃ',outputstr)
-    outputstr = re.sub('c','t͡ʃʰ',outputstr)
+    
+    if flag=='n':
+        outputstr = re.sub('s','ʃ',outputstr)
+        outputstr = re.sub('z','t͡ʃ',outputstr)
+        outputstr = re.sub('c','t͡ʃʰ',outputstr)
+    else:
+        outputstr = re.sub('s','s',outputstr)
+        outputstr = re.sub('z','t͡s',outputstr)
+        outputstr = re.sub('c','t͡sʰ',outputstr)
+
     outputstr = re.sub('ng','ŋ',outputstr)
 
     outputstr = re.sub(r'([ptk])6',r'\1̚˨',outputstr)
@@ -63,7 +70,12 @@ def  jyutping_to_ipa(inputstr):
     outputstr = re.sub(r'([ptk])1',r'\1̚˥',outputstr)
     outputstr = re.sub('4','˨˩',outputstr)
     outputstr = re.sub('1','˥˥',outputstr)
-    outputstr = re.sub('5','˨˦',outputstr)
+
+    if flag=='n':
+        outputstr = re.sub('5','˨˦',outputstr) # 阳上：南宁24 广州13
+    else:
+        outputstr = re.sub('5','˩˧',outputstr)
+
     outputstr = re.sub('2','˧˥',outputstr)
     outputstr = re.sub('6','˨˨',outputstr)
     outputstr = re.sub('3','˧˧',outputstr)

@@ -24,7 +24,7 @@ def dealfunc(regstr,prose,flag,flag2):
                     s = ''
             else:
                 if flag==1:
-                    s = jyutping_to_ipa(dictionary[list(prose)[0]])
+                    s = jyutping_to_ipa(dictionary[list(prose)[0]],'n' if filename == 'data_naamning.txt' else 'g')
                 else:
                     s = dictionary[list(prose)[0]]
         except KeyError:
@@ -39,7 +39,7 @@ def dealfunc(regstr,prose,flag,flag2):
                         s += ''
                 else:
                     if flag==1:
-                        s += ' '+ jyutping_to_ipa(dictionary[char])
+                        s += ' '+ jyutping_to_ipa(dictionary[char],'n' if filename == 'data_naamning.txt' else 'g')
                     else:
                         s += ' '+ dictionary[char]
             except KeyError:
@@ -66,9 +66,6 @@ for paragraph in lyrics:
         out.write(s.replace('<space> ',' ').replace('<space>',' ')+'\n[')
 
         s2 = dealfunc('[0-9A-Za-z]|[-_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,1,1)
-        if filename=='data_gwongzau':
-            out.write(s2.replace('<space> ',' ').replace('<space>',' ').replace('˨˦','˩˧')+']\n')  # 阳上：南宁24 广州13
-        else:
-            out.write(s2.replace('<space> ',' ').replace('<space>',' ')+']\n')
+        out.write(s2.replace('<space> ',' ').replace('<space>',' ')+']\n')
 
 out.close()
