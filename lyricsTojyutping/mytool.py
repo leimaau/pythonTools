@@ -4,8 +4,8 @@ def  jyutping_to_ipa(inputstr,flag):
 
     outputstr = inputstr
 
-    outputstr = re.sub(r'(^|[ ])(m)(\d)',r'\1m̩\3',inputstr)
-    outputstr = re.sub(r'(^|[ ])(ng)(\d)',r'\1ŋ̩\3',outputstr)
+    outputstr = re.sub(r'(^|[ /])(m)(\d)',r'\1m̩\3',inputstr)
+    outputstr = re.sub(r'(^|[ /])(ng)(\d)',r'\1ŋ̩\3',outputstr)
     outputstr = re.sub('sl','ɬ',outputstr)
     outputstr = re.sub('nj','ȵ',outputstr)
 
@@ -45,10 +45,10 @@ def  jyutping_to_ipa(inputstr,flag):
 
     outputstr = re.sub('gw','Kʷ',outputstr)
     outputstr = re.sub('kw','Kʷʰ',outputstr)
-    outputstr = re.sub(r'(^|[ ])([ptk])',r'\1\2ʰ',outputstr)
-    outputstr = re.sub(r'(^|[ ])b',r'\1p',outputstr)
-    outputstr = re.sub(r'(^|[ ])d',r'\1t',outputstr)
-    outputstr = re.sub(r'(^|[ ])g',r'\1k',outputstr)
+    outputstr = re.sub(r'(^|[ /])([ptk])',r'\1\2ʰ',outputstr)
+    outputstr = re.sub(r'(^|[ /])b',r'\1p',outputstr)
+    outputstr = re.sub(r'(^|[ /])d',r'\1t',outputstr)
+    outputstr = re.sub(r'(^|[ /])g',r'\1k',outputstr)
 
     outputstr = re.sub(r'zy(\d)',r't͡Sɿ\1',outputstr)
     outputstr = re.sub(r'cy(\d)',r't͡Sʰɿ\1',outputstr)
