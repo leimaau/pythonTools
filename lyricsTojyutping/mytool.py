@@ -18,33 +18,30 @@ def  jyutping_to_ipa(inputstr,flag):
     outputstr = re.sub('oeng','œːŋ',outputstr)
     outputstr = re.sub('oe','œː',outputstr)
 
-    outputstr = re.sub('uk','ʊk',outputstr)
-    outputstr = re.sub('ung','ʊŋ',outputstr)
-    outputstr = re.sub(r'u([in])',r'uː\1',outputstr)
+    outputstr = re.sub('uk','ʊk',outputstr)  # uk[ok]
+    outputstr = re.sub('ung','ʊŋ',outputstr) # ung[oŋ]
+    outputstr = re.sub(r'u([in])',r'uː\1',outputstr) # ui[uːy]
     outputstr = re.sub('ut','uːt',outputstr)
     outputstr = re.sub(r'([^aeio])u(\d)',r'\1uː\2',outputstr)
 
-    outputstr = re.sub('ing','ɪŋ',outputstr)
-    outputstr = re.sub('ik','ɪk',outputstr)
-    outputstr = re.sub(r'i([pt])',r'ɪ\1',outputstr)
-    outputstr = re.sub(r'i([umn])',r'iː\1',outputstr)
+    outputstr = re.sub('eng','ɛːŋ',outputstr)
+    outputstr = re.sub(r'e([umnptk])',r'ɛː\1',outputstr)
+    outputstr = re.sub(r'e(\d)',r'ɛː\1',outputstr)
+
+    outputstr = re.sub('ing','ɪŋ',outputstr) # ing[eŋ]
+    outputstr = re.sub('ik','ɪk',outputstr)  # ik[ek]
+    outputstr = re.sub(r'i([umnpt])',r'iː\1',outputstr)
     outputstr = re.sub(r'([^aeuoː])i(\d)',r'\1iː\2',outputstr)
 
     outputstr = re.sub('ong','ɔːŋ',outputstr)
-    outputstr = re.sub(r'o([imn])',r'ɔː\1',outputstr)
-    outputstr = re.sub(r'o([ptk])',r'ɔː\1',outputstr)
+    outputstr = re.sub(r'o([imnptk])',r'ɔː\1',outputstr) # oi[ɔːy]
     outputstr = re.sub(r'o(\d)',r'ɔː\1',outputstr)
-
-    outputstr = re.sub('eng','ɛːŋ',outputstr)
-    outputstr = re.sub(r'e([umn])',r'ɛː\1',outputstr)
-    outputstr = re.sub(r'e([ptk])',r'ɛː\1',outputstr)
-    outputstr = re.sub(r'e(\d)',r'ɛː\1',outputstr)
 
     outputstr = re.sub('aa','Aː',outputstr)
     outputstr = re.sub('a','ɐ',outputstr)
 
-    outputstr = re.sub('gw','Kʷ',outputstr)
-    outputstr = re.sub('kw','Kʷʰ',outputstr)
+    outputstr = re.sub('gw','Kʷ',outputstr)  # gw[ku]
+    outputstr = re.sub('kw','Kʷʰ',outputstr) # kw[kʰu]
     outputstr = re.sub(r'(^|[ /])([ptk])',r'\1\2ʰ',outputstr)
     outputstr = re.sub(r'(^|[ /])b',r'\1p',outputstr)
     outputstr = re.sub(r'(^|[ /])d',r'\1t',outputstr)
