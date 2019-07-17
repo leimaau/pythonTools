@@ -62,11 +62,11 @@ for paragraph in lyrics.readlines():
 
         prose = re.sub(r'([\u4e00-\u9fa5]+)([0-9A-Za-z-_]+)',r'\1<space>\2',prose)
         
-        s = dealfunc('[0-9A-Za-z-]|[_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,0,1)
-        out.write(s.replace('<space> ',' ').replace('<space>',' ')+'\n[')
+        s = dealfunc('[0-9A-Za-z-]|[_,，.。?？!！:：;；“”\[\]<>「」『』《》、 ]+',prose.replace('<space>',' '),0,1)
+        out.write(s+'\n[')
 
-        s2 = dealfunc('[0-9A-Za-z-]|[_,，.。?？!！:：;；“”\[\]<>「」『』《》、]+',prose,1,1)
-        out.write(s2.replace('<space> ',' ').replace('<space>',' ')+']\n')
+        s2 = dealfunc('[0-9A-Za-z-]|[_,，.。?？!！:：;；“”\[\]<>「」『』《》、 ]+',prose.replace('<space>',' '),1,1)
+        out.write(s2+']\n')
 
 data.close()
 lyrics.close()

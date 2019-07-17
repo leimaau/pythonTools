@@ -1,0 +1,23 @@
+import re
+from mytool import ipa_to_jyutping,jyutping_to_ipa
+
+in_txt = open('input.txt', encoding='utf-8')
+out_txt = open('output.txt', 'w', encoding='utf-8')
+
+for paragraph in in_txt.readlines():
+    try:
+        line = paragraph.replace(' ','$@').split()[0]
+    except:
+        continue
+
+    sentences = line.split()
+    for prose in sentences:
+        out_txt.write(prose.replace('$@',' '))
+        out_txt.write('\t')
+
+        s = ipa_to_jyutping(prose.replace('$@',' '))
+        #s = jyutping_to_ipa(prose.replace('$@',' '),'n')
+        out_txt.write(s+'\n')
+        
+in_txt.close()
+out_txt.close()

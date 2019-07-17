@@ -2,8 +2,6 @@ import re
 
 def  jyutping_to_ipa(inputstr,flag):
 
-    outputstr = inputstr
-
     outputstr = re.sub(r'(^|[ /])(m)(\d)',r'\1m̩\3',inputstr)
     outputstr = re.sub(r'(^|[ /])(ng)(\d)',r'\1ŋ̩\3',outputstr)
     outputstr = re.sub('sl','ɬ',outputstr)
@@ -65,18 +63,78 @@ def  jyutping_to_ipa(inputstr,flag):
     outputstr = re.sub(r'([ptk])6',r'\1̚˨',outputstr)
     outputstr = re.sub(r'([ptk])3',r'\1̚˧',outputstr)
     outputstr = re.sub(r'([ptk])1',r'\1̚˥',outputstr)
+    
     outputstr = re.sub('4','˨˩',outputstr)
     outputstr = re.sub('1','˥˥',outputstr)
-
     if flag=='n':
         outputstr = re.sub('5','˨˦',outputstr) # 阳上：南宁24 广州13
     else:
         outputstr = re.sub('5','˩˧',outputstr)
-
     outputstr = re.sub('2','˧˥',outputstr)
     outputstr = re.sub('6','˨˨',outputstr)
     outputstr = re.sub('3','˧˧',outputstr)
 
+    outputstr = outputstr.lower()
+
+    return outputstr
+
+
+def  ipa_to_jyutping(inputstr):
+
+    outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2',r'\g<n1>\g<n2>\g<n3>6',inputstr)
+    outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3',r'\g<n1>\g<n2>\g<n3>3',outputstr)
+    outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5',r'\g<n1>\g<n2>\g<n3>1',outputstr)
+
+    outputstr = re.sub(r'˨˩|21','4',outputstr)
+    outputstr = re.sub(r'˥˥|55','1',outputstr)
+    outputstr = re.sub(r'˨˦|˩˧|24|13','5',outputstr)
+    outputstr = re.sub(r'˧˥|35','2',outputstr)
+    outputstr = re.sub(r'˨˨|22','6',outputstr)
+    outputstr = re.sub(r'˧˧|33','3',outputstr)
+
+    outputstr = re.sub(r't͡ʃʰ|t͡sʰ|tʃʰ|tsʰ|tʃh|tsh|ʧʰ|ʦʰ|ʧh|ʦh','c',outputstr)
+    outputstr = re.sub(r't͡ʃ|t͡s|tʃ|ts|ʧ|ʦ','z',outputstr)
+    outputstr = re.sub(r'ʃ|s','s',outputstr)
+
+    outputstr = re.sub(r'ʊk|ok','uk',outputstr)
+    outputstr = re.sub(r'ʊŋ|oŋ','ung',outputstr)
+    outputstr = re.sub('uː','u',outputstr)
+
+    outputstr = re.sub(r'kʷʰ|kʰʷ|kwh|khw','Kw',outputstr)
+    outputstr = re.sub(r'kʷ|kw','gw',outputstr)
+    outputstr = re.sub(r'(kʰu|khu)([^i\d])',r'Kw\2',outputstr)
+    outputstr = re.sub(r'ku([^i\d])',r'gw\1',outputstr)
+
+    outputstr = re.sub(r'(^|[ /])p([^hʰ])',r'\1b\2',outputstr)
+    outputstr = re.sub(r'(^|[ /])t([^hʰ])',r'\1d\2',outputstr)
+    outputstr = re.sub(r'(^|[ /])k([^hʰ])',r'\1g\2',outputstr)
+    outputstr = re.sub(r'(^|[ /])(ph|pʰ)',r'\1p',outputstr)
+    outputstr = re.sub(r'(^|[ /])(th|tʰ)',r'\1t',outputstr)
+    outputstr = re.sub(r'(^|[ /])(kh|kʰ)',r'\1k',outputstr)
+
+    outputstr = re.sub(r'aː|a','aa',outputstr)
+    outputstr = re.sub(r'ɐ','a',outputstr)
+
+    outputstr = re.sub(r'(ɔː|ɔ)',r'o',outputstr)
+
+    outputstr = re.sub(r'eŋ|ɪŋ','ing',outputstr)
+    outputstr = re.sub(r'ek|ɪk','ik',outputstr)
+    outputstr = re.sub(r'iː','i',outputstr)
+    outputstr = re.sub(r'ɛː|ɛ','e',outputstr)
+    outputstr = re.sub(r'œː|œ','oe',outputstr)
+
+    outputstr = re.sub('ɵy','eoi',outputstr)
+    outputstr = re.sub('ɵ','eo',outputstr)
+
+    outputstr = re.sub('ɬ','sl',outputstr)
+    outputstr = re.sub('ȵ','nj',outputstr)
+
+    outputstr = re.sub(r'm̩|m̍','m',outputstr)
+    outputstr = re.sub(r'ŋ̩|ŋ̍|ŋ','ng',outputstr)
+    outputstr = re.sub(r'yː|y','yu',outputstr)
+    outputstr = re.sub('ɿ','y',outputstr)
+    outputstr = re.sub(r'[ʔ∅ø0]','',outputstr)
+    
     outputstr = outputstr.lower()
 
     return outputstr
