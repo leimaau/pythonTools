@@ -74,7 +74,7 @@ def  jyutping_to_ipa(inputstr,flag):
     outputstr = re.sub('6','˨˨',outputstr)
     outputstr = re.sub('3','˧˧',outputstr)
 
-    outputstr = outputstr.lower()
+    outputstr = outputstr.lower()             # .replace('ː','').replace('͡','').replace('̚','')
 
     return outputstr
 
