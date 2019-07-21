@@ -3,5 +3,5 @@
 ### 1.ipa_jyutping
 ipa与jyutping相互转换
 
-### 2.SignLyrics
-给歌词标注jyutping和ipa
+### 2.SignArticle
+给文本标注jyutping和ipa
