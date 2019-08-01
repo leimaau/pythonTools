@@ -6708,6 +6708,7 @@
 繆	miu6
 么	mo1
 麼	mo1
+麽	mo1
 仫	mo1
 嚤	mo1
 摩	mo1
@@ -10699,6 +10700,7 @@
 再	zoi3
 載	zoi3
 在	zoi6
+扗	zoi6
 作	zok3
 卓	zok3
 捉	zok3

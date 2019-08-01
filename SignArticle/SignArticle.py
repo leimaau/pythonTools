@@ -4,6 +4,7 @@ import jieba.posseg as pseg
 from mytool import jyutping_to_ipa
 from opencc import OpenCC
 cc = OpenCC('s2t')
+jieba.set_dictionary("./extra_dict/dict.txt.big")
 
 file_name='data_naamning.txt' # 字词典文件 data_naamning 南宁粤拼; data_gwongzau 广州粤拼
 data = open(file_name, encoding='utf-8')
@@ -21,7 +22,7 @@ for line in data.readlines():
 
 def cutwords(words):
     cutwordslist = []
-    result = pseg.cut(words)
+    result = pseg.cut(cc.convert(words))
     for w in result:
         cutwordslist.append(w.word)
     return cutwordslist
@@ -61,6 +62,7 @@ def dealfunc_characters(regstr,prose,flag,flag2,n_g):
 
 def dealfunc_phrases(regstr,prose,flag,flag2,n_g):
     prose_list = cutwords(prose)
+    # print(prose_list)
     try:
         if re.match(r"" + regstr, prose_list[0]):
             if flag2==1:
@@ -112,12 +114,12 @@ for paragraph in article.readlines():
         
         prose = re.sub(r'([\u4e00-\u9fa5]+)([0-9A-Za-z-_]+)',r'\1<space>\2',prose)
         
-        s = dealfunc_phrases('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',cc.convert(prose).replace('<space>',' '),0,1,'n' if file_name == 'data_naamning.txt' else 'g')
-        #s = dealfunc_characters('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',cc.convert(prose).replace('<space>',' '),0,1,'n' if file_name == 'data_naamning.txt' else 'g')
+        s = dealfunc_phrases('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',prose.replace('<space>',' '),0,1,'n' if file_name == 'data_naamning.txt' else 'g')
+        #s = dealfunc_characters('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',prose.replace('<space>',' '),0,1,'n' if file_name == 'data_naamning.txt' else 'g')
         out.write(s+'\n[')
 
-        s2 = dealfunc_phrases('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',cc.convert(prose).replace('<space>',' '),1,1,'n' if file_name == 'data_naamning.txt' else 'g')
-        #s2 = dealfunc_characters('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',cc.convert(prose).replace('<space>',' '),1,1,'n' if file_name == 'data_naamning.txt' else 'g')
+        s2 = dealfunc_phrases('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',prose.replace('<space>',' '),1,1,'n' if file_name == 'data_naamning.txt' else 'g')
+        #s2 = dealfunc_characters('[0-9A-Za-z-]|[_,，.。·…?—？!！:：;；“”\[\]<>「」『』【】（）《》、 ]+',prose.replace('<space>',' '),1,1,'n' if file_name == 'data_naamning.txt' else 'g')
         out.write(s2+']\n')
 
 data.close()
