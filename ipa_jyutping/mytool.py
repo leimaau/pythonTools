@@ -64,12 +64,14 @@ def  jyutping_to_ipa(inputstr,flag):
     outputstr = re.sub(r'([ptk])3',r'\1̚˧',outputstr)
     outputstr = re.sub(r'([ptk])1',r'\1̚˥',outputstr)
     
-    outputstr = re.sub('4','˨˩',outputstr)
     outputstr = re.sub('1','˥˥',outputstr)
     if flag=='n':
-        outputstr = re.sub('5','˨˦',outputstr) # 阳上：南宁24 广州13
+      outputstr = re.sub('4','˨˩',outputstr) # 阳平：南宁21 广州11
+      outputstr = re.sub('5','˨˦',outputstr) # 阳上：南宁24 广州13
     else:
-        outputstr = re.sub('5','˩˧',outputstr)
+      outputstr = re.sub('4','˩˩',outputstr)
+      outputstr = re.sub('5','˩˧',outputstr)
+
     outputstr = re.sub('2','˧˥',outputstr)
     outputstr = re.sub('6','˨˨',outputstr)
     outputstr = re.sub('3','˧˧',outputstr)
@@ -85,7 +87,7 @@ def  ipa_to_jyutping(inputstr):
     outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3',r'\g<n1>\g<n2>\g<n3>3',outputstr)
     outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5',r'\g<n1>\g<n2>\g<n3>1',outputstr)
 
-    outputstr = re.sub(r'˨˩|21','4',outputstr)
+    outputstr = re.sub(r'˨˩|21|˩˩|11','4',outputstr)
     outputstr = re.sub(r'˥˥|55','1',outputstr)
     outputstr = re.sub(r'˨˦|˩˧|24|13','5',outputstr)
     outputstr = re.sub(r'˧˥|35','2',outputstr)

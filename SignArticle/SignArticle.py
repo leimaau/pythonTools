@@ -24,7 +24,7 @@ def cutwords(words):
         cutwordslist.append(w.word)
     return cutwordslist
 
-# flag: 0-拼音 1-ipa ; flag2: 0-regstr忽略 1-regstr不忽略 ; flag3: n-南宁型ipa g-广州型ipa
+# flag: 0-拼音 1-ipa ; flag2: 0-regstr忽略 1-regstr不忽略 ; n_g: n-南宁型ipa g-广州型ipa
 def dealfunc_characters(regstr,prose,flag,flag2,n_g):
     prose_list = list(prose)
     try:
