@@ -16,7 +16,7 @@ for paragraph in in_txt.readlines():
         out_txt.write('\t')
 
         s = ipa_to_jyutping(prose.replace('$@',' '))
-        #s = jyutping_to_ipa(prose.replace('$@',' '),'n')
+        #s = jyutping_to_ipa(prose.replace('$@',' '),'n',0)
         out_txt.write(s+'\n')
         
 in_txt.close()

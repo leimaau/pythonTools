@@ -1,6 +1,6 @@
 import re
 
-def  jyutping_to_ipa(inputstr,flag,flag2):
+def  jyutping_to_ipa(inputstr,flag,ipatype):
 
     outputstr = re.sub(r'(^|[ /])(m)(\d)',r'\1m̩\3',inputstr)
     outputstr = re.sub(r'(^|[ /])(ng)(\d)',r'\1ŋ̩\3',outputstr)
@@ -76,7 +76,7 @@ def  jyutping_to_ipa(inputstr,flag,flag2):
     outputstr = re.sub('6','˨˨',outputstr)
     outputstr = re.sub('3','˧˧',outputstr)
 
-    if flag==0: 
+    if ipatype==0: 
       outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','')
     else:
       outputstr = outputstr.lower()
