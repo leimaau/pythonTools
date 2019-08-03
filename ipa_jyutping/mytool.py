@@ -1,6 +1,6 @@
 import re
 
-def  jyutping_to_ipa(inputstr,flag):
+def  jyutping_to_ipa(inputstr,flag,flag2):
 
     outputstr = re.sub(r'(^|[ /])(m)(\d)',r'\1m̩\3',inputstr)
     outputstr = re.sub(r'(^|[ /])(ng)(\d)',r'\1ŋ̩\3',outputstr)
@@ -76,7 +76,10 @@ def  jyutping_to_ipa(inputstr,flag):
     outputstr = re.sub('6','˨˨',outputstr)
     outputstr = re.sub('3','˧˧',outputstr)
 
-    outputstr = outputstr.lower()             # .replace('ː','').replace('͡','').replace('̚','')
+    if flag==0: 
+      outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','')
+    else:
+      outputstr = outputstr.lower()
 
     return outputstr
 
@@ -102,10 +105,10 @@ def  ipa_to_jyutping(inputstr):
     outputstr = re.sub(r'ʊŋ|oŋ','ung',outputstr)
     outputstr = re.sub('uː','u',outputstr)
 
-    outputstr = re.sub(r'kʷʰ|kʰʷ|kwh|khw','Kw',outputstr)
-    outputstr = re.sub(r'kʷ|kw','gw',outputstr)
-    outputstr = re.sub(r'(kʰu|khu)([^i\d])',r'Kw\2',outputstr)
-    outputstr = re.sub(r'ku([^i\d])',r'gw\1',outputstr)
+    outputstr = re.sub(r'kʷʰ|kʰʷ|kwh|khw|kʰu|khu','Kw',outputstr)
+    outputstr = re.sub(r'kʷ|kw|ku','gw',outputstr)
+    outputstr = re.sub(r'(Kw)([inktg]*)(\d)',r'Ku\2\3',outputstr)
+    outputstr = re.sub(r'(gw)([inktg]*)(\d)',r'gu\2\3',outputstr)
 
     outputstr = re.sub(r'(^|[ /])p([^hʰ])',r'\1b\2',outputstr)
     outputstr = re.sub(r'(^|[ /])t([^hʰ])',r'\1d\2',outputstr)
