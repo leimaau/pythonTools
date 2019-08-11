@@ -78,6 +78,7 @@ def  jyutping_to_ipa(inputstr,flag,ipatype):
 
     if ipatype==0: 
       outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','')
+      outputstr = outputstr.lower().replace('˥','⁵').replace('˦','⁴').replace('˧','³').replace('˨','²').replace('˩','¹')
     else:
       outputstr = outputstr.lower()
 
@@ -86,16 +87,16 @@ def  jyutping_to_ipa(inputstr,flag,ipatype):
 
 def  ipa_to_jyutping(inputstr):
 
-    outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2',r'\g<n1>\g<n2>\g<n3>6',inputstr)
-    outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3',r'\g<n1>\g<n2>\g<n3>3',outputstr)
-    outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5',r'\g<n1>\g<n2>\g<n3>1',outputstr)
+    outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2|(?P<n4>[ptk])²',r'\g<n1>\g<n2>\g<n3>\g<n4>6',inputstr)
+    outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3|(?P<n4>[ptk])³',r'\g<n1>\g<n2>\g<n3>\g<n4>3',outputstr)
+    outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5|(?P<n4>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>\g<n4>1',outputstr)
 
-    outputstr = re.sub(r'˨˩|21|˩˩|11','4',outputstr)
-    outputstr = re.sub(r'˥˥|55','1',outputstr)
-    outputstr = re.sub(r'˨˦|˩˧|24|13','5',outputstr)
-    outputstr = re.sub(r'˧˥|35','2',outputstr)
-    outputstr = re.sub(r'˨˨|22','6',outputstr)
-    outputstr = re.sub(r'˧˧|33','3',outputstr)
+    outputstr = re.sub(r'˨˩|21|˩˩|11|²¹|¹¹','4',outputstr)
+    outputstr = re.sub(r'˥˥|55|⁵⁵','1',outputstr)
+    outputstr = re.sub(r'˨˦|˩˧|24|13|²⁴|¹³','5',outputstr)
+    outputstr = re.sub(r'˧˥|35|³⁵','2',outputstr)
+    outputstr = re.sub(r'˨˨|22|²²','6',outputstr)
+    outputstr = re.sub(r'˧˧|33|³³','3',outputstr)
 
     outputstr = re.sub(r't͡ʃʰ|t͡sʰ|tʃʰ|tsʰ|tʃh|tsh|ʧʰ|ʦʰ|ʧh|ʦh','c',outputstr)
     outputstr = re.sub(r't͡ʃ|t͡s|tʃ|ts|ʧ|ʦ','z',outputstr)

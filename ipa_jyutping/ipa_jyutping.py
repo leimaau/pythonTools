@@ -12,8 +12,8 @@ for paragraph in in_txt.readlines():
 
     sentences = line.split()
     for prose in sentences:
-        out_txt.write(prose.replace('$@',' '))
-        out_txt.write('\t')
+        #out_txt.write(prose.replace('$@',' '))
+        #out_txt.write('\t')
 
         s = ipa_to_jyutping(prose.replace('$@',' '))
         #s = jyutping_to_ipa(prose.replace('$@',' '),'n',0)
