@@ -1,9 +1,13 @@
 import re
 
-def  jyutping_to_ipa(inputstr,flag,ipatype):
+# area: n-南宁型ipa  g-广州型ipa  p-南宁平话型ipa  p2-第二种南宁平话型ipa
+# ipatype: 0-宽式音标(上标调值数码) 1-宽式音标(不上标调值数码) 2-严式音标(调值竖线)
+def  jyutping_to_ipa(inputstr,area,ipatype):
 
-    outputstr = re.sub(r'(^|[ /])(m)(\d)',r'\1m̩\3',inputstr)
-    outputstr = re.sub(r'(^|[ /])(ng)(\d)',r'\1ŋ̩\3',outputstr)
+    outputstr = inputstr
+
+    outputstr = re.sub(r'(^|[ /])(m)(\d)',r'\1m̩\3',outputstr)
+    outputstr = re.sub(r'(^|[ /])(ng)(\d)',r'\1ŋ̍\3',outputstr)
     outputstr = re.sub('sl','ɬ',outputstr)
     outputstr = re.sub('nj','ȵ',outputstr)
 
@@ -48,8 +52,9 @@ def  jyutping_to_ipa(inputstr,flag,ipatype):
     outputstr = re.sub(r'zy(\d)',r't͡Sɿ\1',outputstr)
     outputstr = re.sub(r'cy(\d)',r't͡Sʰɿ\1',outputstr)
     outputstr = re.sub(r'sy(\d)',r'Sɿ\1',outputstr)
-    
-    if flag=='n':
+    outputstr = re.sub('ng','ŋ',outputstr)
+
+    if area=='n' or area=='p':
         outputstr = re.sub('s','ʃ',outputstr)
         outputstr = re.sub('z','t͡ʃ',outputstr)
         outputstr = re.sub('c','t͡ʃʰ',outputstr)
@@ -58,52 +63,104 @@ def  jyutping_to_ipa(inputstr,flag,ipatype):
         outputstr = re.sub('z','t͡s',outputstr)
         outputstr = re.sub('c','t͡sʰ',outputstr)
 
-    outputstr = re.sub('ng','ŋ',outputstr)
-
-    outputstr = re.sub(r'([ptk])6',r'\1̚˨',outputstr)
-    outputstr = re.sub(r'([ptk])3',r'\1̚˧',outputstr)
-    outputstr = re.sub(r'([ptk])1',r'\1̚˥',outputstr)
-    
-    outputstr = re.sub('1','˥˥',outputstr)
-    if flag=='n':
-      outputstr = re.sub('4','˨˩',outputstr) # 阳平：南宁21 广州11
-      outputstr = re.sub('5','˨˦',outputstr) # 阳上：南宁24 广州13
+    if area=='p2':
+        outputstr = re.sub('ȵ','ɲ',outputstr)
+        outputstr = re.sub('w','β',outputstr)
+        outputstr = re.sub('ɐ','ə',outputstr)
+        outputstr = re.sub('œ','ø',outputstr)
+        outputstr = re.sub('ɛ','e',outputstr)
+        outputstr = re.sub('ɔ','o',outputstr)
+        outputstr = re.sub(r'iə([ŋk])',r'iɐ\1',outputstr)
+        outputstr = outputstr.replace('ɪ','e')
+    elif area=='p':
+        outputstr = re.sub('ɔ','o',outputstr)
+        outputstr = re.sub(r'(ɛ|ɛː)(\d)',r'e\2',outputstr)
+        outputstr = outputstr.replace('ɪ','e')
     else:
-      outputstr = re.sub('4','˩˩',outputstr)
-      outputstr = re.sub('5','˩˧',outputstr)
+        outputstr = outputstr
 
-    outputstr = re.sub('2','˧˥',outputstr)
-    outputstr = re.sub('6','˨˨',outputstr)
-    outputstr = re.sub('3','˧˧',outputstr)
+    if area=='n' or area=='g':
+        outputstr = re.sub(r'([ptk])6',r'\1̚˨',outputstr)
+        outputstr = re.sub(r'([ptk])3',r'\1̚˧',outputstr)
+        outputstr = re.sub(r'([ptk])1',r'\1̚˥',outputstr)
+    else:
+        outputstr = re.sub(r'([ptk])3',r'\1̚˥',outputstr)
+        outputstr = re.sub(r'([ptk])2',r'\1̚˧',outputstr)
+        outputstr = re.sub(r'([ptk])5',r'\1̚˨˦',outputstr)
+        outputstr = re.sub(r'([ptk])6',r'\1̚˨',outputstr)
+
+    if area=='n':
+        outputstr = re.sub('1','˥˥',outputstr)
+        outputstr = re.sub('2','˧˥',outputstr)
+        outputstr = re.sub('3','˧˧',outputstr)
+        outputstr = re.sub('4','˨˩',outputstr)
+        outputstr = re.sub('5','˨˦',outputstr)
+        outputstr = re.sub('6','˨˨',outputstr)
+    elif area=='g':
+        outputstr = re.sub('1','˥˥',outputstr)
+        outputstr = re.sub('2','˧˥',outputstr)
+        outputstr = re.sub('3','˧˧',outputstr)
+        outputstr = re.sub('4','˩˩',outputstr)
+        outputstr = re.sub('5','˩˧',outputstr)
+        outputstr = re.sub('6','˨˨',outputstr)
+    else:
+        outputstr = re.sub('1','˥˧',outputstr)
+        outputstr = re.sub('2','˧˧',outputstr)
+        outputstr = re.sub('3','˥˥',outputstr)
+        outputstr = re.sub('4','˨˩',outputstr)
+        outputstr = re.sub('5','˨˦',outputstr)
+        outputstr = re.sub('6','˨˨',outputstr)
 
     if ipatype==0: 
-      outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','')
-      outputstr = outputstr.lower().replace('˥','⁵').replace('˦','⁴').replace('˧','³').replace('˨','²').replace('˩','¹')
+        outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','').replace('ɪ','e')
+        outputstr = outputstr.lower().replace('˥','⁵').replace('˦','⁴').replace('˧','³').replace('˨','²').replace('˩','¹')
+    elif ipatype==1:
+        outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','').replace('ɪ','e')
+        outputstr = outputstr.lower().replace('˥','5').replace('˦','4').replace('˧','3').replace('˨','2').replace('˩','1')
     else:
-      outputstr = outputstr.lower()
+        outputstr = outputstr.lower()
 
     return outputstr
 
 
-def  ipa_to_jyutping(inputstr):
+def  ipa_to_jyutping(inputstr,area):
 
-    outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2|(?P<n4>[ptk])²',r'\g<n1>\g<n2>\g<n3>\g<n4>6',inputstr)
-    outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3|(?P<n4>[ptk])³',r'\g<n1>\g<n2>\g<n3>\g<n4>3',outputstr)
-    outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5|(?P<n4>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>\g<n4>1',outputstr)
+    outputstr = inputstr
 
-    outputstr = re.sub(r'˨˩|21|˩˩|11|²¹|¹¹','4',outputstr)
-    outputstr = re.sub(r'˥˥|55|⁵⁵','1',outputstr)
-    outputstr = re.sub(r'˨˦|˩˧|24|13|²⁴|¹³','5',outputstr)
-    outputstr = re.sub(r'˧˥|35|³⁵','2',outputstr)
-    outputstr = re.sub(r'˨˨|22|²²','6',outputstr)
-    outputstr = re.sub(r'˧˧|33|³³','3',outputstr)
-
+    if area=='n' or area=='g':
+        outputstr = re.sub(r'˨˩|21|²¹|˩˩|11|¹¹','_4',outputstr)
+        outputstr = re.sub(r'˥˥|55|⁵⁵','_1',outputstr)
+        outputstr = re.sub(r'˨˦|24|²⁴|˩˧|13|¹³','_5',outputstr)
+        outputstr = re.sub(r'˧˥|35|³⁵','_2',outputstr)
+        outputstr = re.sub(r'˨˨|22|²²','_6',outputstr)
+        outputstr = re.sub(r'˧˧|33|³³','_3',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2|(?P<n4>[ptk])²',r'\g<n1>\g<n2>\g<n3>\g<n4>6',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3|(?P<n4>[ptk])³',r'\g<n1>\g<n2>\g<n3>\g<n4>3',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5|(?P<n4>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>\g<n4>1',outputstr)
+    else:
+        outputstr = re.sub(r'˨˩|21|²¹','_4',outputstr)
+        outputstr = re.sub(r'˥˧|53|⁵³|˦˩|41|⁴¹','_1',outputstr)
+        outputstr = re.sub(r'˨˦|24|²⁴|˨˧|23|²³','_5',outputstr)
+        outputstr = re.sub(r'˧˧|33|³³','2',outputstr)
+        outputstr = re.sub(r'˨˨|22|²²|˨˨˧|223|²²³','_6',outputstr)
+        outputstr = re.sub(r'˥˥|55|⁵⁵','_3',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2|(?P<n4>[ptk])²',r'\g<n1>\g<n2>\g<n3>\g<n4>6',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3|(?P<n4>[ptk])³',r'\g<n1>\g<n2>\g<n3>\g<n4>2',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5|(?P<n4>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>\g<n4>3',outputstr)
+    
+    outputstr = re.sub('_','',outputstr)
     outputstr = re.sub(r't͡ʃʰ|t͡sʰ|tʃʰ|tsʰ|tʃh|tsh|ʧʰ|ʦʰ|ʧh|ʦh','c',outputstr)
     outputstr = re.sub(r't͡ʃ|t͡s|tʃ|ts|ʧ|ʦ','z',outputstr)
     outputstr = re.sub(r'ʃ|s','s',outputstr)
 
-    outputstr = re.sub(r'ʊk|ok','uk',outputstr)
-    outputstr = re.sub(r'ʊŋ|oŋ','ung',outputstr)
+    if area=='n' or area=='g':
+        outputstr = re.sub(r'ʊk|ok','uk',outputstr)
+        outputstr = re.sub(r'ʊŋ|oŋ','ung',outputstr)
+    else:
+        outputstr = re.sub(r'oŋ','ong',outputstr)
+
+    outputstr = re.sub(r'^([yi])([mnptk])(\d)',r'j\1\2\3',outputstr)
+    outputstr = re.sub(r'^([yi])(\d)',r'j\1\2',outputstr)
     outputstr = re.sub('uː','u',outputstr)
 
     outputstr = re.sub(r'kʷʰ|kʰʷ|kwh|khw|kʰu|khu','Kw',outputstr)
@@ -119,7 +176,7 @@ def  ipa_to_jyutping(inputstr):
     outputstr = re.sub(r'(^|[ /])(kh|kʰ)',r'\1k',outputstr)
 
     outputstr = re.sub(r'aː|a','aa',outputstr)
-    outputstr = re.sub(r'ɐ','a',outputstr)
+    outputstr = re.sub(r'ɐ|ə','a',outputstr)
 
     outputstr = re.sub(r'(ɔː|ɔ)',r'o',outputstr)
 
@@ -127,20 +184,21 @@ def  ipa_to_jyutping(inputstr):
     outputstr = re.sub(r'ek|ɪk','ik',outputstr)
     outputstr = re.sub(r'iː','i',outputstr)
     outputstr = re.sub(r'ɛː|ɛ','e',outputstr)
-    outputstr = re.sub(r'œː|œ','oe',outputstr)
+    outputstr = re.sub(r'œː|œ|øː|ø','oe',outputstr)
 
     outputstr = re.sub('ɵy','eoi',outputstr)
     outputstr = re.sub('ɵ','eo',outputstr)
 
     outputstr = re.sub('ɬ','sl',outputstr)
-    outputstr = re.sub('ȵ','nj',outputstr)
+    outputstr = re.sub(r'ȵ|ɲ','nj',outputstr)
+    outputstr = re.sub(r'v|β','w',outputstr)
 
     outputstr = re.sub(r'm̩|m̍','m',outputstr)
     outputstr = re.sub(r'ŋ̩|ŋ̍|ŋ','ng',outputstr)
     outputstr = re.sub(r'yː|y','yu',outputstr)
     outputstr = re.sub('ɿ','y',outputstr)
-    outputstr = re.sub(r'[ʔ∅ø0]','',outputstr)
-    
+    outputstr = re.sub(r'^[ʔ∅0]','',outputstr)
+
     outputstr = outputstr.lower()
 
     return outputstr

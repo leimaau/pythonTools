@@ -12,11 +12,14 @@ for paragraph in in_txt.readlines():
 
     sentences = line.split()
     for prose in sentences:
-        #out_txt.write(prose.replace('$@',' '))
+
+        prose = prose.replace('$@',' ')
+
+        #out_txt.write(prose)
         #out_txt.write('\t')
 
-        s = ipa_to_jyutping(prose.replace('$@',' '))
-        #s = jyutping_to_ipa(prose.replace('$@',' '),'n',0)
+        s = ipa_to_jyutping(prose,'p')   # area: n-南宁型ipa  g-广州型ipa  p-南宁平话型ipa  p2-第二种南宁平话型ipa
+        #s = jyutping_to_ipa(prose,'p',1)
         out_txt.write(s+'\n')
         
 in_txt.close()
