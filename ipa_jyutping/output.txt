@@ -1,4 +1,3 @@
-ipa
 do1
 to1
 taa1
@@ -16,8 +15,6 @@ lo4
 zo2
 zo2
 co1
-no1
-no1
 go1
 go1
 go3
@@ -54,7 +51,7 @@ do2
 diak2
 to2
 to2
-to6
+to3
 do6
 do3
 nu6
@@ -89,6 +86,7 @@ ko2
 ko3
 ngo4
 ngo6
+hu2
 hu2
 hu2
 hu3
@@ -163,6 +161,8 @@ ngaa4
 ngaa4
 jaa5
 haa1
+haa1
+hiak2
 haa4
 haa4
 haa4
@@ -181,6 +181,7 @@ ze2
 zi3
 ce2
 ce3
+ce3
 zik6
 sle1
 sle2
@@ -188,7 +189,6 @@ sle3
 sle3
 sle4
 ce4
-ze6
 zi6
 de1
 zi1
@@ -201,6 +201,7 @@ se6
 se6
 se1
 se1
+se2
 se2
 se3
 se3
@@ -320,31 +321,23 @@ hu2
 hu3
 hu3
 ng4
-ngu4
 ng4
-ngu4
 ng4
-ngu4
 ng4
-ngu4
 ng5
-ngu5
 ng5
-ngu5
 ng5
-ngu5
 ng6
-ngu6
 ng6
-ngu6
 hu1
 hu2
 hu2
 hu3
-wu4
-wu4
-wu4
-wu4
+hu4
+hu4
+hu4
+hu4
+hu4
 hu1
 hu4
 hu4
@@ -354,6 +347,7 @@ hu6
 ng6
 hu6
 hu4
+wu1
 wu1
 wu1
 wu1
@@ -370,6 +364,7 @@ lyu6
 cyu1
 slyu3
 zyu4
+zyu6
 zyu6
 zyu6
 syu3
@@ -416,7 +411,8 @@ hyu1
 hyu1
 hyu3
 gyu4
-gyu5
+gyu4
+gyu4
 gyu6
 gyu5
 gyu5
@@ -501,7 +497,6 @@ zyu2
 zyu3
 zyu3
 zyu3
-kyu1
 syu1
 syu3
 syu1
@@ -534,20 +529,22 @@ jyu5
 jyu5
 jyu5
 jyu5
-wu4
+jyu6
 jyu4
 jyu4
 jyu4
 jyu6
 jyu6
 jyu6
-daai1
 daai1
 daai3
 taai1
 daai4
+daai4
+daai4
+daai4
 taai3
-taai3
+daai6
 daai4
 daai4
 daai4
@@ -566,6 +563,7 @@ zaai2
 zaai3
 zaai3
 caai1
+caai2
 caai2
 caai2
 caai2
@@ -627,7 +625,7 @@ gaai3
 gaai3
 gaai3
 gaai3
-haai1
+kaai1
 kaai2
 haai4
 haai6
@@ -649,6 +647,7 @@ caai1
 zaai4
 saai1
 slaa2
+saai3
 saai3
 gaai1
 gaai1
@@ -813,6 +812,8 @@ kwai3
 kwai3
 waai6
 wai6
+wai6
+wai6
 gwaai1
 gwaai3
 kwaai2
@@ -869,6 +870,7 @@ mi4
 mi4
 mi4
 mi4
+mi4
 mi5
 li4
 li4
@@ -910,7 +912,6 @@ si6
 si6
 nji4
 nji5
-oe5
 gi3
 gi2
 gi4
@@ -1011,6 +1012,8 @@ ji3
 ni5
 li4
 li4
+li4
+li5
 li5
 li5
 li5
@@ -1039,6 +1042,7 @@ zi6
 zi4
 zi4
 zi3
+ci1
 ci1
 ci2
 zi4
@@ -1074,7 +1078,6 @@ si5
 si6
 si6
 ji4
-oe4
 nji5
 nji5
 gi1
@@ -1144,6 +1147,7 @@ wai2
 wai2
 wai2
 wai2
+wai3
 wai3
 wai4
 wai4
@@ -1288,6 +1292,7 @@ gaau2
 gaau3
 kaau2
 kaau2
+kaau2
 kaau3
 kaau3
 ngaau4
@@ -1304,6 +1309,7 @@ haau4
 haau4
 haau6
 haau6
+aau4
 aau4
 aau3
 aau3
@@ -1324,7 +1330,8 @@ baau4
 baau1
 baau4
 maau4
-meu1
+meu3
+miu1
 naau4
 maau5
 maau6
@@ -1343,7 +1350,6 @@ caau1
 caau2
 caau2
 zaau4
-zu4
 saau1
 saau1
 saau2
@@ -1360,6 +1366,7 @@ gaau3
 gaau3
 haau1
 gaau3
+haau6
 gaau3
 gaau3
 haau1
@@ -1513,7 +1520,8 @@ dau4
 dau6
 dau6
 lau4
-lau2
+lau1
+lau5
 lau4
 lau5
 lau6
@@ -1523,6 +1531,7 @@ zau3
 cau3
 slau1
 slau3
+gau1
 gau1
 gau1
 gau1
@@ -1563,6 +1572,7 @@ fau4
 fu6
 fu6
 fu6
+foek2
 mau4
 maau4
 nau2
@@ -1631,7 +1641,6 @@ sau2
 sau3
 zau4
 sau4
-sau4
 sau6
 sau6
 sau6
@@ -1697,7 +1706,8 @@ daap6
 naam4
 naam4
 naap5
-laam2
+laam5
+laam5
 laai1
 zaam1
 caam1
@@ -1771,7 +1781,6 @@ caap2
 zaam4
 zaam4
 zaap6
-zaa3
 caam3
 gaam3
 gaam2
@@ -1798,6 +1807,7 @@ gaam3
 gaap2
 gaap2
 kaam3
+ngaam4
 ngaam4
 haam4
 laam6
@@ -1851,6 +1861,7 @@ jim2
 jim2
 jim3
 jip2
+jim4
 jim4
 jim4
 jim4
@@ -1968,7 +1979,6 @@ kap2
 ham1
 kam3
 kap2
-lap3
 kap2
 gam4
 gam4
@@ -2035,11 +2045,7 @@ gaan2
 gaan2
 gaan2
 gaan3
-get2
-gaat2
 got2
-get2
-gaat2
 got2
 haan1
 haan2
@@ -2155,33 +2161,35 @@ zin2
 zin6
 zin6
 slin1
-slun1
-slun2
-slun2
+slyun1
+slyun2
+slyun2
 slin3
-slut2
+slin3
+slyut2
+slit2
 slit2
 hin4
 slin3
+slin3
 zin2
-zut2
-zut2
-cut2
-cut2
+zyut2
+zyut2
+cyut2
+cyut2
 zin4
 zit2
 zin1
 zin3
 zin3
-zut2
-sut6
-zut2
+zyut2
+zyut2
 sit6
 sin1
 sin1
 sin1
 sin3
-cut2
+cyut2
 sim4
 sin4
 sin6
@@ -2196,8 +2204,9 @@ gin4
 gin4
 gin6
 gin4
-gun6
-gut6
+gyun6
+gyut6
+gyut6
 jin3
 nit6
 nin1
@@ -2213,8 +2222,8 @@ gin6
 gin6
 gin6
 jyun4
-hun1
-hun1
+hyun1
+hyun1
 hin3
 hin3
 hit2
@@ -2265,16 +2274,16 @@ zit6
 slin1
 slit2
 slit2
-gun1
-gun1
+gyun1
+gyun1
 gaan2
 gaan2
 gaan2
 gin3
-gut2
+gyut2
 gyut5
 gyut5
-hun1
+hyun1
 ngaan4
 njen1
 jyun6
@@ -2295,6 +2304,7 @@ bun1
 bun1
 bun3
 bun6
+but2
 but2
 but6
 pun1
@@ -2395,6 +2405,7 @@ waan6
 waan1
 waan1
 lin6
+lin6
 lyut5
 zyun4
 zyun4
@@ -2461,6 +2472,7 @@ faat6
 faat6
 maan5
 maan5
+maan5
 maan6
 maan6
 maat5
@@ -2506,10 +2518,8 @@ gan1
 gan1
 han2
 han2
-ngan6
-hen2
-ngan6
-hen2
+han2
+han2
 han4
 han2
 han6
@@ -2643,7 +2653,7 @@ dan1
 dan3
 dan3
 tui3
-dan6
+dan4
 dan4
 tan1
 dan4
@@ -2655,6 +2665,7 @@ dan6
 dat6
 nun6
 lan6
+lan4
 lan4
 zun1
 zun2
@@ -2710,8 +2721,7 @@ slat2
 slan4
 slan4
 slan4
-slan6
-slun4
+slan4
 can1
 zat6
 slat2
@@ -2772,8 +2782,10 @@ gwan1
 wat2
 gwan4
 gwan4
+gwan4
 gwan6
 wat2
+wan1
 wan1
 wan1
 wan1
@@ -2885,7 +2897,6 @@ kaang3
 kaang3
 ngaang4
 ngaak5
-ngaak5
 haak2
 haak2
 haang4
@@ -2950,7 +2961,6 @@ ziang3
 ziang3
 ziang3
 ziak2
-ziak2
 ciang3
 ziang4
 ziang4
@@ -2958,7 +2968,6 @@ ziang4
 ziang6
 ziang6
 ziang6
-ziak6
 ziak6
 zaang1
 zaang1
@@ -3011,6 +3020,7 @@ jiak2
 ngiak2
 kiang1
 kiang1
+giang1
 giang1
 giang1
 giang1
@@ -3312,7 +3322,6 @@ ngiang6
 ngiak5
 hang1
 hiak2
-hiak2
 hiang4
 hiang6
 hang4
@@ -3386,8 +3395,10 @@ ing2
 ing2
 bing2
 bing3
+bing3
 bik2
 ping3
+pik2
 pik2
 pik2
 ming4
@@ -3468,6 +3479,7 @@ bing4
 bing4
 bing4
 bing6
+bing6
 ming4
 mik6
 ding1
@@ -3483,6 +3495,7 @@ dik2
 ting1
 ting1
 ting1
+ting3
 tik2
 tik2
 ding4
@@ -3567,7 +3580,6 @@ boeng4
 pok2
 pok2
 pok2
-pok2
 moeng4
 moeng5
 moeng5
@@ -3582,7 +3594,7 @@ toeng1
 toeng2
 toeng2
 toeng3
-toek2
+tok2
 doeng4
 doeng4
 doeng4
@@ -3611,6 +3623,9 @@ zoeng3
 coeng1
 coeng1
 coeng1
+coeng1
+coeng1
+toeng1
 toeng1
 zoeng4
 zoek6
@@ -3633,7 +3648,7 @@ hoeng2
 hoeng4
 hoeng4
 hoeng4
-hoeng2
+goeng2
 hoeng6
 hoeng6
 hoek6
@@ -3660,7 +3675,6 @@ foeng1
 foeng1
 foeng1
 foeng3
-foek2
 foek2
 foek2
 foek2
@@ -3720,6 +3734,7 @@ hoeng3
 coek2
 joek2
 wat2
+wat2
 joeng4
 joeng4
 joeng4
@@ -3760,7 +3775,6 @@ zoeng2
 zoeng2
 coeng2
 zoeng4
-zoeng5
 zoeng6
 zoeng1
 zoeng1
