@@ -29,7 +29,7 @@ def cutwords(words):
 
 # isIPA: jyutping-拼音 IPA-ipa
 # regstr_ignore: yes_ignore-忽略 no_ignore-不忽略
-# area: n-南宁型ipa  g-广州型ipa  p-南宁平话型ipa  p2-第二种南宁平话型ipa
+# area: n-南宁ipa  g-广州ipa  p-南宁平话《广西通志·汉语方言志》版IPA  p2-《南宁平话词典》版IPA
 # ipatype: 0-宽式音标(上标调值数码) 1-宽式音标(不上标调值数码) 2-严式音标(调值竖线)
 def dealfunc_characters(regstr,prose,isIPA,regstr_ignore,area,ipatype):
     prose_list = list(prose)

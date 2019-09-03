@@ -1,4 +1,4 @@
-## Python小工具
+## 个人自制Python小工具
 
 ### 1.simp_trad
 繁简转换
@@ -9,6 +9,8 @@ ipa与jyutping相互转换
 ### 3.SignArticle
 给文本标注jyutping和ipa
 
+### 4.InferDialect
+由中古音推导方音
 
 ## 第三方库
 * [jieba](https://github.com/fxsjy/jieba) MIT License
