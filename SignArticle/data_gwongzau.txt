@@ -64775,7 +64775,7 @@
 孰能無過	suk6 nang4 mou4 gwo3
 孰能生巧	suk6 nang4 sang1 haau2
 孱弱	saan4 joek6
-孱頭	saan4 tau4
+孱頭	caan3 tau4
 孳乳	zi1 jyu5
 孳孳	zi1 zi1
 孳息	zi1 sik1
@@ -80139,11 +80139,14 @@
 撐拒	caang3 keoi5
 撐持	caang1 ci4
 撐杆	caang1 gon1
-撐枱腳	caang1 toi4 goek3
 撐枱腳	caang3 toi2 goek3
+撐檯腳	caang3 toi2 goek3
+𨅝枱腳	caang3 toi2 goek3
+𨅝檯腳	caang3 toi2 goek3
+牚枱腳	caang3 toi2 goek3
+牚檯腳	caang3 toi2 goek3
 撐桿跳	caang1 gon1 tiu3
 撐桿跳高	caang1 gon1 tiu3 gou1
-撐檯腳	caang3 toi2 goek3
 撐死	caang1 sei2
 撐死膽大的，餓死膽小的	caang3 sei2 daam2 daai6 dik1 ngo6 sei2 daam2 siu2 dik1
 撐破	caang1 po3
@@ -80153,7 +80156,7 @@
 撐船	caang1 syun4
 撐艇	caang1 teng5
 撐艇仔	caang1 teng5 zai2
-撐門面	caang3 mun4 min6
+撐門面	caang1 mun4 min6
 撒丁島	saat3 ding1 dou2
 撒丫子	saat3 aa1 zi2
 撒但	saat3 daan6
@@ -83023,7 +83026,7 @@
 擇日子	zaak6 jat6 zi2
 擇菜	zaak6 coi3
 擇食	zaak6 sik6
-擉背脊	duk1 bui3 zek3
+厾背脊	duk1 bui3 zek3
 擊中	gik1 zung3
 擊倒	gik1 dou2
 擊傷	gik1 soeng1
@@ -87803,7 +87806,6 @@
 昧旦	mui6 daan3
 昧死	mui6 sei2
 昧水	mei6 seoi2
-昧水	mui6 seoi2
 昧水舂牆	mei6 seoi2 zung1 coeng4
 昧沒	mui6 mut6
 昧良心	mui6 loeng4 sam1
@@ -114426,7 +114428,7 @@
 硬掙	ngaang6 zang1
 硬掙	ngaang6 zeng6
 硬推	ngaang6 teoi1
-硬撐	ngaang6 caang1
+硬撐	ngaang6 caang3
 硬是	ngaang6 si6
 硬晒舦	ngaang6 saai3 taai5
 硬晒軚	ngaang6 saai3 taai3
@@ -159025,12 +159027,11 @@
 看着辦	hon3 zoek6 baan6
 睡不着	seoi6 bat1 zoek6
 睡着	seoi6 zoek6
-瞓唔着	fan3 m4 zoek3
 瞓唔着	fan3 m4 zoek6
-瞓唔着覺	fan3 m4 zoek3 gaau3
-瞓着	fan3 zoek3
-瞓着咗	fan3 zoek3 zo2
-瞓着覺	fan3 zoek3 gaau3
+瞓唔着覺	fan3 m4 zoek6 gaau3
+瞓着	fan3 zoek6
+瞓着咗	fan3 zoek6 zo2
+瞓着覺	fan3 zoek6 gaau3
 瞧着辦	ciu4 zoek6 baan6
 石末沉着病	sek6 mut6 cam4 zoek6 beng6
 硬着頭皮	ngaang6 zoek6 tau4 pei4

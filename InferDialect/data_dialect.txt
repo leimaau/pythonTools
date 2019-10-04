@@ -1,15 +1,3 @@
-㪕	coek3
-㪗	tau2
-㬤	jap1
-㮇	tim2
-㿭	caak3
-䀇	gu2
-䂻	zaang6
-䉲	mi4
-䝋	zung1
-䝼	cing4
-䝼	zing6
-䥛	git3
 一	jat1
 丁	deng1
 丁	ding1
@@ -104,6 +92,7 @@
 仄	zak1
 仅	gan2
 仆	fu6
+仆	puk1
 仇	cau4
 仇	kau4
 今	gam1
@@ -194,6 +183,7 @@
 併	bing3
 佻	tiu1
 使	si2
+使	sai2
 使	si3
 侃	hon2
 侄	zat6
@@ -278,6 +268,7 @@
 假	gaa3
 假	gaa2
 偉	wai5
+偉	wai2
 偌	je6
 偎	wui1
 偏	pin1
@@ -381,6 +372,7 @@
 其	ki4
 具	gyu6
 典	din2
+典	dim2
 兼	gim1
 冀	gi3
 冉	jim5
@@ -414,6 +406,8 @@
 凝	ning4
 几	gi1
 凡	faan4
+凭	pang4
+凭	bang6
 凰	wong4
 凱	hoi2
 凳	dang3
@@ -450,6 +444,7 @@
 制	zai3
 刷	caat3
 券	hyun3
+券	gyun3
 刺	cy3
 刺	cek3
 刺	ci3
@@ -472,6 +467,7 @@
 剜	wun2
 剝	bok3
 剩	sing6
+剩	zing6
 剪	zin2
 剮	gwaa2
 副	fu3
@@ -632,6 +628,7 @@
 台	toi4
 叱	cik1
 史	si2
+史	sai2
 右	jau6
 叵	po2
 叶	hip3
@@ -858,6 +855,7 @@
 嗆	coeng1
 嗇	sik1
 嗉	slu3
+嗉	slui3
 嗎	maa1
 嗎	maa5
 嗑	hap6
@@ -1481,6 +1479,7 @@
 巳	si6
 巴	baa1
 巷	hong6
+巷	hong2
 巽	slyun3
 巽	slan3
 巾	gan1
@@ -1586,6 +1585,7 @@
 弄	lung6
 弈	jik6
 弊	bai6
+弊	bi6
 式	sik1
 弒	si3
 弓	gung1
@@ -1616,6 +1616,7 @@
 彎	waan1
 彗	wai6
 彙	wai6
+彙	wui6
 彝	ji4
 形	jing4
 彤	tung4
@@ -1798,6 +1799,7 @@
 慕	mu6
 慘	caam2
 慚	caam4
+慚	caan4
 慝	tak1
 慟	dung6
 慢	maan6
@@ -1954,6 +1956,7 @@
 拌	bun6
 拍	paak3
 拎	ling1
+拎	ning1
 拐	gwaai2
 拒	kyu5
 拓	tok3
@@ -1997,6 +2000,7 @@
 挫	co3
 振	zan3
 挺	ting5
+挺	ting2
 挼	no1
 挽	wen5
 挽	waan5
@@ -2147,6 +2151,7 @@
 播	bo3
 撮	cyut3
 撰	zaan6
+撰	zyun6
 撲	puk1
 撳	gam6
 撻	taat3
@@ -2183,6 +2188,7 @@
 擾	jiu2
 攀	paan1
 攆	lin5
+攆	nen2
 攏	lung5
 攔	laan4
 攘	joeng6
@@ -2192,11 +2198,13 @@
 攢	zan2
 攢	cyun4
 攣	lyun4
+攣	lyun1
 攤	taan1
 攪	gaau2
 攪	geu2
 攫	kok3
 攬	laam5
+攬	laam2
 攮	nong2
 支	zi1
 收	sau1
@@ -2215,6 +2223,7 @@
 教	gaau3
 教	geu3
 敝	bai6
+敝	bi6
 敞	cong2
 敢	gaam2
 散	slaan3
@@ -2231,6 +2240,7 @@
 數	su2
 斂	lim5
 斃	bai6
+斃	bi6
 文	man4
 斐	fi2
 斑	baan1
@@ -2291,7 +2301,6 @@
 映	jing2
 春	cyun1
 春	can1
-昧	mi6
 昧	mui6
 昨	zok6
 昭	ciu1
@@ -2565,6 +2574,7 @@
 榫	slan2
 榭	ze6
 榮	wing4
+榮	jung4
 榴	lau4
 榷	kok3
 榻	taap3
@@ -2641,6 +2651,7 @@
 欄	laan4
 權	kyun4
 欖	laam5
+欖	laam2
 欛	baa3
 欠	him3
 次	cy3
@@ -2708,6 +2719,7 @@
 毫	hu4
 毯	taan2
 毽	gin3
+毽	jin2
 氈	zin1
 氏	si6
 氏	zi1
@@ -2789,6 +2801,7 @@
 泅	cau4
 泉	cyun4
 泊	bok6
+泊	paak3
 泌	bi3
 泓	hung4
 泔	gam1
@@ -2974,6 +2987,7 @@
 漏	lau6
 漓	li4
 演	jin2
+演	jim2
 漕	cu4
 漚	au3
 漠	mok6
@@ -3064,6 +3078,7 @@
 灒	zaan3
 灘	taan1
 灠	laam5
+灠	laam2
 灣	waan1
 火	fo2
 灰	fui1
@@ -3227,6 +3242,7 @@
 犍	gin3
 犍	kin4
 犒	hu3
+犒	kaau3
 犖	lok3
 犛	li4
 犢	duk6
@@ -3276,6 +3292,7 @@
 獲	waak6
 獵	lip6
 獷	gong2
+獷	kong3
 獸	sau3
 獺	caat3
 獻	hin3
@@ -3508,6 +3525,7 @@
 皺	jau3
 皺	zau3
 皿	ming5
+皿	man5
 盂	jyu4
 盃	bui1
 盅	zung1
@@ -3650,6 +3668,7 @@
 碓	dui3
 碗	wun2
 碘	din2
+碘	dim2
 碟	dip6
 碧	bik1
 碩	sek6
@@ -3864,8 +3883,9 @@
 筵	jin4
 筷	waai3
 筷	faai3
-箅	bi3
+箅	bi6
 箋	zin1
+箋	cim1
 箍	ku1
 箏	zang1
 箔	bok6
@@ -3887,6 +3907,7 @@
 築	cuk1
 篙	gu1
 篡	saan3
+篡	cyun3
 篤	duk1
 篦	bi6
 篩	sai1
@@ -3961,6 +3982,7 @@
 糶	tiu3
 系	hai6
 糾	gau2
+糾	dau2
 紀	gi2
 紂	zau6
 約	joek3
@@ -4043,6 +4065,7 @@
 緇	zi1
 緊	gan2
 緒	syu5
+緒	syu3
 緘	gaam1
 線	slin3
 緝	cap1
@@ -4053,6 +4076,7 @@
 緩	wun5
 緬	min5
 緯	wai5
+緯	wai2
 練	lin6
 緻	zi3
 縈	jing4
@@ -4287,10 +4311,12 @@
 脹	zoeng3
 脾	pi4
 腆	tin2
+腆	dim2
 腊	laap6
 腊	slik1
 腋	jik6
 腌	jim1
+腌	jip3
 腎	san5
 腐	fu6
 腑	fu2
@@ -4398,6 +4424,7 @@
 艱	gaan1
 色	sik1
 艷	jim6
+艷	jin3
 艾	ngaai6
 芋	wu6
 芍	zoek3
@@ -4498,6 +4525,7 @@
 菠	bo1
 菢	bu6
 菩	pu4
+菩	po4
 華	waa4
 菰	gu1
 菱	ling4
@@ -4528,6 +4556,7 @@
 葡	pu4
 董	dung2
 葦	wai5
+葦	wai2
 葩	paa1
 葫	wu4
 葬	zong3
@@ -4571,9 +4600,11 @@
 蔣	zoeng2
 蔥	cung1
 蔫	jin1
+蔫	nin1
 蔬	so1
 蔭	jam3
 蔽	bai3
+蔽	bi6
 蕃	faan4
 蕉	ziu1
 蕊	jui5
@@ -4793,6 +4824,7 @@
 裊	niu5
 裌	gaap3
 裏	lyu5
+裏	li5
 裔	jui6
 裕	jyu6
 裘	kau4
@@ -4801,6 +4833,7 @@
 裝	zong1
 裟	saa1
 裡	lyu5
+裡	li5
 裨	bi1
 裨	pi4
 裳	soeng4
@@ -4857,6 +4890,7 @@
 覺	koek3
 覺	geu3
 覽	laam5
+覽	laam2
 觀	gun3
 觀	gun1
 角	gok3
@@ -4928,6 +4962,7 @@
 誓	sai6
 誕	daan3
 誘	jau5
+誘	jau3
 語	jyu5
 誠	sing4
 誡	gaai3
@@ -4973,6 +5008,7 @@
 謄	tang4
 謊	fong1
 謎	mai4
+謎	mi4
 謗	bong2
 謙	him1
 講	gong2
@@ -5016,6 +5052,7 @@
 豎	syu6
 豐	fung1
 豔	jim6
+豔	jin3
 豕	ci2
 豚	tan4
 象	zoeng6
@@ -5106,6 +5143,7 @@
 赭	ze2
 走	zau2
 赳	gau2
+赳	dau2
 赴	fu6
 赶	gon2
 起	hi2
@@ -5133,6 +5171,7 @@
 跗	fu1
 跚	saan1
 跛	bo2
+跛	bai1
 距	kyu5
 跟	gan1
 跡	zik1
@@ -5225,6 +5264,7 @@
 輞	mong5
 輟	zyut3
 輦	lin5
+輦	nen2
 輩	bui3
 輪	lyun4
 輪	lan4
@@ -5277,6 +5317,7 @@
 述	sat6
 迴	wui4
 迷	mai4
+迷	mi4
 迸	bing3
 迺	naai5
 追	zui1
@@ -5341,6 +5382,7 @@
 遴	lan4
 遵	zyun1
 遷	cin1
+遷	cim1
 選	slyun2
 遺	wai4
 遼	liu4
@@ -5401,6 +5443,7 @@
 酷	huk6
 酸	slyun1
 醃	jim1
+醃	jip3
 醇	slyun4
 醇	san4
 醉	zui3
@@ -5538,6 +5581,7 @@
 鏃	zuk6
 鏇	slyun4
 鏈	lin6
+鏈	lin2
 鏊	ngu6
 鏑	dik1
 鏖	u1
@@ -5756,6 +5800,7 @@
 面	min6
 靦	tin2
 靦	min5
+靦	dim2
 靨	jip3
 革	gaak3
 靪	ding1
@@ -5876,6 +5921,7 @@
 餽	gwai6
 餾	lau4
 餿	slau1
+餿	sluk1
 饃	mo4
 饅	maan6
 饑	gi1
@@ -5936,10 +5982,13 @@
 骨	gwat1
 骯	ong1
 骰	tau4
+骰	sik1
 骷	fu1
+骷	ku1
 骸	haai4
 骼	gaak3
 髏	lau4
+髏	lu1
 髒	zong1
 髓	sui2
 體	tai2
@@ -5963,6 +6012,7 @@
 鬱	wat1
 鬼	gwai2
 魁	fui1
+魁	kwai4
 魂	wan4
 魄	paak3
 魅	mi6
@@ -5986,6 +6036,7 @@
 鯨	king4
 鯰	nim4
 鯽	zik1
+鯽	zak1
 鰍	cau1
 鰓	sloi1
 鰣	si4
@@ -6114,6 +6165,7 @@
 齷	ak1
 龍	lung4
 龐	pong4
+龐	paang4
 龔	gung1
 龕	ham1
 龜	gwai1
@@ -6124,3 +6176,15 @@
 𥮜	mi4
 𥱼	paai4
 𨉣	haa1
+㪕	coek3
+㪗	tau2
+㬤	jap1
+㮇	tim2
+㿭	caak3
+䀇	gu2
+䂻	zaang6
+䉲	mi4
+䝋	zung1
+䝼	cing4
+䝼	zing6
+䥛	git3
