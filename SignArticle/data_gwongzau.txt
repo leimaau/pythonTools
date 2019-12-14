@@ -35042,9 +35042,9 @@
 亂搞男女關係	lyun6 gaau2 naam4 neoi5 gwaan1 hai6
 亂撞	lyun6 zong6
 亂政	lyun6 zing3
-亂晒坑	lyun6 saai3 haang1
-亂晒大龍	lyun6 saai3 daai6 lung4
-亂晒籠	lyun6 saai3 lung4
+亂嗮坑	lyun6 saai3 haang1
+亂嗮大龍	lyun6 saai3 daai6 lung4
+亂嗮籠	lyun6 saai3 lung4
 亂民	lyun6 man4
 亂流	lyun6 lau4
 亂爬	lyun6 paa4
@@ -50935,7 +50935,7 @@
 可惜	ho2 sik1
 可惡	ho2 wu3
 可惱	ho2 nou5
-可惱也	ho2 nou5 jaa5
+可惱也	ko1 naau1 je1
 可想像	ho2 soeng2 zoeng6
 可想然之	ho2 soeng2 jin4 zi1
 可想而知	ho2 soeng2 ji4 zi1
@@ -63224,7 +63224,7 @@
 女童	neoi5 tung4
 女童院	neoi5 tung4 jyun2
 女管家	neoi5 gun2 gaa1
-女紅	neoi5 hung4
+女紅	neoi5 gung1
 女繼承人	neoi5 gai3 sing4 jan4
 女舍監	neoi5 se3 gaam1
 女色	neoi5 sik1
@@ -106161,8 +106161,8 @@
 犂靬	lai4 gin1
 犄角	gei1 gok3
 犄角旮旯	gei1 gok3 go1 lo1
-犍爲	gin1 wai4
-犍爲縣	gin1 wai4 jyun6
+犍爲	kin4 wai4
+犍爲縣	kin4 wai4 jyun6
 犍牛	gin1 ngau4
 犍陀羅	gin1 to4 lo4
 犎牛	fung1 ngau4
@@ -117748,6 +117748,7 @@
 籬垣	lei4 wun4
 籬笆	lei4 baa1
 籮噼	lo1 pet1
+𦣇噼	lo1 pet1
 籮底橙	lo4 dai2 caang2
 籮筐	lo4 hong1
 籲請	jyu6 cing2
@@ -139098,7 +139099,7 @@
 身板兒	san1 baan2 ji4
 身歷聲	san1 lik6 seng1
 身段	san1 dyun6
-身毒	san1 duk6
+身毒	gyun1 duk1
 身水身汗	san1 seoi2 san1 hon6
 身法	san1 faat3
 身爲	san1 wai4
@@ -158735,19 +158736,20 @@
 㗎話	gaa4 waa2
 㗎頭	gaa4 tau4
 㗾㗾聲	heoi4 heoi4 seng1
+㗾㗾聲	heoi4 heoi2 seng1
 㗾哆	heoi1 do1
 㚻姦	gai1 gaan1
 㜺鬼	zaan2 gwai2
 㞎㞎	baa2 baa2
 㨃鬼	deoi2 gwai2
-㨘到立立呤	saang2 dou3 laap6 laap6 ling4
+㨘到立立呤	saang2 dou3 laap3 laap3 ling3
 㨘牛王	saang2 ngau4 wong4
 㩒住頭	gam6 zyu6 tau4
 㩒機	gam6 gei1
 㩒錢	gam6 cin2
 㩒鐘	gam6 zung1
 㩒鷓鴣	gam6 ze3 gu1
-㩧㩧齋	pok3 pok3 zaai1
+㩧㩧齋	bok1 bok1 zaai1
 㩧佬	pok1 lou2
 㩧帽	bok1 mou2
 㩧濕	pok3 sap1
@@ -158817,7 +158819,6 @@
 𥋇唔開眼	caang3 m4 hoi1 ngaan5
 𥋇大隻眼	caang3 daai6 zek3 ngaan5
 𥋇眼	caang3 ngaan5
-𦣇噼	lo1 pek1
 𦧲飯應	loe1 faan6 jing3
 𦧺嘴唇	laai2 zeoi2 seon4
 𦧺屎窟	laai2 si2 fat1
