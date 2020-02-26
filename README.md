@@ -1,4 +1,4 @@
-## 个人自制Python小工具
+## Personal python Tool
 
 ### 1.simp_trad
 繁简转换

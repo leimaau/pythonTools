@@ -14,12 +14,12 @@ for paragraph in article.readlines():
 
     sentences = line.split()
     for prose in sentences:
-        out.write(prose.replace('<space>',' ')+'\n')
+        #out.write(prose.replace('<space>',' ')+'\n')
         
-        s = cc.convert(prose.replace('<space>',' '))
-        out.write(s+'\n')
-        s2 = cc2.convert(s.replace('<space>',' '))
-        out.write(s2+'\n\n')
+        #s = cc.convert(prose.replace('<space>',' '))
+        #out.write(s+'\n')
+        s2 = cc2.convert(prose.replace('<space>',' '))
+        out.write(s2+'\n')
 
 article.close()
 out.close()
