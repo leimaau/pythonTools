@@ -12,6 +12,9 @@ ipa与jyutping相互转换
 ### 4.InferDialect
 由中古音推导方音
 
+### 5.handleMaterial
+材料组织整理
+
 ## 第三方库
 * [jieba](https://github.com/fxsjy/jieba) MIT License
 
