@@ -31,7 +31,9 @@ def  showData(first, final):
     for i in range(len(filenames)):
         for j in range(first, final):
             newlist = list(filter(lambda x: x[0] == j, dictList))
-            if(i == 0): f.writelines('\t' + newlist[i][2])
+            if(i == 0): 
+                if(j==first): f.writelines('-')
+                f.writelines('\t' + newlist[i][2])
         
         f.write('\n' + filenames[i].replace('.txt','') + '\t')
 
