@@ -46,7 +46,7 @@ step = 8 # 每多少字换行
 
 for i in range(0, totalchar, step):
     if(totalchar-i<step):
-        showData(i, i + totalchar-i)
+        showData(i, totalchar)
     else:
         showData(i, i + step)
     f.write('\n')
