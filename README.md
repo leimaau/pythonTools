@@ -15,6 +15,9 @@ ipa与jyutping相互转换
 ### 5.handleMaterial
 材料组织整理
 
+### 6.dealDialect
+古韵与方言对照表
+
 ## 第三方库
 * [jieba](https://github.com/fxsjy/jieba) MIT License
 
