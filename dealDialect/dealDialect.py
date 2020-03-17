@@ -35,7 +35,7 @@ def listTodict(intput):
 
 firstList = showDialect('first')
 # 预设方言声母排序
-sortRule = listTodict(['p','ph','m','f','w','v','t','th','n','ɬ','l','ts','tsh','s','tʃ','ʧ','tʃh','ʧh','ȵ','ʃ','k','kh','ŋ','h','∅'])
+sortRule = listTodict(['p','ph','b','ɓ','m','f','v','t','th','d','ɗ','n','ɬ','l','ts','tsh','ʣ','s','z','tʂ','tʂh','dʐ','','ʂ','ʐ','tɕ','tɕh','ʥ','ɕ','ʑ','tʃ','ʧ','tʃh','ʧh','ȵ','ʃ','k','kh','ɡ','ŋ','h','∅'])
 try:
     firstList = sorted(firstList, key=lambda x: sortRule[x])
 except KeyError as err:
@@ -46,7 +46,7 @@ print(firstList)
 
 finalList = showDialect('final')
 # 预设方言韵母排序
-presetfirst = ['i','u','y','a','ia','ua','ɛ','iɛ','uɛ','œ','ɔ','uɔ','ai','iai','uai','ɐi','uɐi','ei','ɔi','ui','iui','au','iau','ɛu','eu','iu','am','ɐm','iɐm','ɛm','em','im','an','iɛn','uan','ɐn','iɐn','uɐn','ɛn','en','ɔn','in','un','yn','aŋ','iaŋ','uaŋ','ɐŋ','uɐŋ','ɛŋ','eŋ','ieŋ','ueŋ','œŋ','iœŋ','ɔŋ','iɔŋ','uɔŋ','ap','iap','ɐp','iɐp','ɛp','ep','ip','at','uat','ɐt','iɐt','uɐt','ɛt','uɛt','et','ɔt','it','ut','yt','ak','uak','ɐk','ɛk','ek','iek','uek','œk','iœk','ɔk','iɔk','uɔk','ok','iok','uok','ŋ']
+presetfirst = ['ɿ','i','u','y','a','ia','ua','ya','ɛ','iɛ','uɛ','yɛ','e','ie','ue','ye','ə','iə','uə','yə','œ','ø','ɔ','iɔ','uɔ','o','io','uo','ai','iai','uai','ɐi','iɐi','uɐi','ei','uei','ɔi','oi','ui','iui','au','iau','ɛu','iɛu','eu','ieu','iu','am','iam','ɐm','iɐm','ɛm','iɛm','em','iem','əm','iəm','øm','ɔm','im','an','iɛn','uan','ɐn','iɐn','uɐn','ɛn','en','ien','ən','iən','øn','ɔn','iɔn','uɔn','in','un','iun','yn','aŋ','iaŋ','uaŋ','ɐŋ','uɐŋ','ɛŋ','iɛŋ','uɛŋ','eŋ','ieŋ','ueŋ','yeŋ','əŋ','iəŋ','uəŋ','yəŋ','iŋ','œŋ','iœŋ','øŋ','iøŋ','ɔŋ','iɔŋ','uɔŋ','oŋ','ioŋ','uoŋ','uŋ','iuŋ','ap','iap','ɐp','iɐp','ɛp','ep','əp','øp','ɔp','ip','at','uat','ɐt','iɐt','uɐt','ɛt','iɛt','uɛt','et','iet','uet','ət','øt','ɔt','iɔt','uɔt','it','ut','iut','yt','ak','iak','uak','ɐk','iɐk','uɐk','ɛk','iɛk','uɛk','ek','iek','uek','œk','iœk','øk','iøk','ɔk','iɔk','uɔk','ok','iok','uok','uk','iuk','ŋ']
 diffList = list(set(finalList).difference(set(presetfirst)))
 if(len(diffList) != 0):
     print('==> 注意有不存在预设排序中的韵母，目前排在后面：')
