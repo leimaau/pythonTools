@@ -52,7 +52,10 @@ def old_new(para, file, old_p, new_p):
     lstg = groupby(dictList,itemgetter(old_p)) 
     newlist = dict([(key,list(group)) for key,group in lstg])
 
-    newlist[para].sort(key=itemgetter(new_p))
+    try:
+        newlist[para].sort(key=itemgetter(new_p))
+    except KeyError:
+        print ('失败，原始数据缺少' + para + '，请检查方言调查字表')
     lstg2 = groupby(newlist[para],itemgetter(new_p)) 
     newlist2 = dict([(key,list(group)) for key,group in lstg2])
     #print(newlist2)
