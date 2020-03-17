@@ -32,36 +32,34 @@ def listTodict(intput):
         tempdict[intput[index]] = index
     return tempdict
 
+def diffFunc(txt, presetList, dataList):
+    diffList = list(set(dataList).difference(set(presetList)))
+    if(len(diffList) != 0):
+        print('==> 注意有不存在预设排序中的' + txt + '，目前排在后面：')
+        print(diffList)
+    sortRule = listTodict(presetList + diffList)
+    dataList = sorted(dataList, key=lambda x: sortRule[x])
+    print('该方言的' + txt + '有：')
+    print(dataList)
+    return dataList
+
 
 firstList = showDialect('first')
 # 预设方言声母排序
-sortRule = listTodict(['p','ph','b','ɓ','m','f','v','t','th','d','ɗ','n','ɬ','l','ts','tsh','ʣ','s','z','tʂ','tʂh','dʐ','','ʂ','ʐ','tɕ','tɕh','ʥ','ɕ','ʑ','tʃ','ʧ','tʃh','ʧh','ȵ','ʃ','k','kh','ɡ','ŋ','h','∅'])
-try:
-    firstList = sorted(firstList, key=lambda x: sortRule[x])
-except KeyError as err:
-    print('==> 注意有不存在预设排序中的声母：' + str(err) + '，请处理再排序')
-print('该方言的声母有：')
-print(firstList)
+presetfirst = ['p','ph','b','ɓ','m','f','v','t','th','d','ɗ','n','ɬ','l','ts','tsh','ʣ','s','z','tʂ','tʂh','dʐ','','ʂ','ʐ','tɕ','tɕh','ʥ','ɕ','ʑ','tʃ','ʧ','tʃh','ʧh','ȵ','ʃ','k','kh','ɡ','ŋ','h','∅']
+firstList = diffFunc('声母', presetfirst, firstList)
 
 
 finalList = showDialect('final')
 # 预设方言韵母排序
-presetfirst = ['ɿ','i','u','y','a','ia','ua','ya','ɛ','iɛ','uɛ','yɛ','e','ie','ue','ye','ə','iə','uə','yə','œ','ø','ɔ','iɔ','uɔ','o','io','uo','ai','iai','uai','ɐi','iɐi','uɐi','ei','uei','ɔi','oi','ui','iui','au','iau','ɛu','iɛu','eu','ieu','iu','am','iam','ɐm','iɐm','ɛm','iɛm','em','iem','əm','iəm','øm','ɔm','im','an','iɛn','uan','ɐn','iɐn','uɐn','ɛn','en','ien','ən','iən','øn','ɔn','iɔn','uɔn','in','un','iun','yn','aŋ','iaŋ','uaŋ','ɐŋ','uɐŋ','ɛŋ','iɛŋ','uɛŋ','eŋ','ieŋ','ueŋ','yeŋ','əŋ','iəŋ','uəŋ','yəŋ','iŋ','œŋ','iœŋ','øŋ','iøŋ','ɔŋ','iɔŋ','uɔŋ','oŋ','ioŋ','uoŋ','uŋ','iuŋ','ap','iap','ɐp','iɐp','ɛp','ep','əp','øp','ɔp','ip','at','uat','ɐt','iɐt','uɐt','ɛt','iɛt','uɛt','et','iet','uet','ət','øt','ɔt','iɔt','uɔt','it','ut','iut','yt','ak','iak','uak','ɐk','iɐk','uɐk','ɛk','iɛk','uɛk','ek','iek','uek','œk','iœk','øk','iøk','ɔk','iɔk','uɔk','ok','iok','uok','uk','iuk','ŋ']
-diffList = list(set(finalList).difference(set(presetfirst)))
-if(len(diffList) != 0):
-    print('==> 注意有不存在预设排序中的韵母，目前排在后面：')
-    print(diffList)
-sortRule = listTodict(presetfirst+diffList)
-finalList = sorted(finalList, key=lambda x: sortRule[x])
-print('该方言的韵母有：')
-print(finalList)
+presetfinal = ['ɿ','i','u','y','a','ia','ua','ya','ɛ','iɛ','uɛ','yɛ','e','ie','ue','ye','ə','iə','uə','yə','œ','ø','ɔ','iɔ','uɔ','o','io','uo','ai','iai','uai','ɐi','iɐi','uɐi','ei','uei','ɔi','oi','ui','iui','au','iau','ɐu','iɐu','ɛu','iɛu','eu','ieu','ou','iou','iu','ɔu','am','iam','ɐm','iɐm','ɛm','iɛm','em','iem','əm','iəm','øm','ɔm','om','im','an','iɛn','uan','ɐn','iɐn','uɐn','ɛn','en','ien','ən','iən','øn','ɔn','iɔn','uɔn','on','ion','uon','in','un','iun','yn','aŋ','iaŋ','uaŋ','ɐŋ','uɐŋ','ɛŋ','iɛŋ','uɛŋ','eŋ','ieŋ','ueŋ','yeŋ','əŋ','iəŋ','uəŋ','yəŋ','iŋ','œŋ','iœŋ','øŋ','iøŋ','ɔŋ','iɔŋ','uɔŋ','oŋ','ioŋ','uoŋ','uŋ','iuŋ','ap','iap','ɐp','iɐp','ɛp','ep','əp','øp','ɔp','op','ip','at','uat','ɐt','iɐt','uɐt','ɛt','iɛt','uɛt','et','iet','uet','ət','øt','ɔt','iɔt','uɔt','ot','it','ut','iut','yt','ak','iak','uak','ɐk','iɐk','uɐk','ɛk','iɛk','uɛk','ek','iek','uek','œk','iœk','øk','iøk','ɔk','iɔk','uɔk','ok','iok','uok','uk','iuk','ŋ']
+finalList = diffFunc('韵母', presetfinal, finalList)
 
 
 toneList = showDialect('tone')
-# 【从方言声调看中古声调，需要自己排序时，把控制台输出的声调写到下一行，手工排序后取消注释再运行】
-# toneList = ['', '2', '21', '24', '3', '33', '35', '5', '53']
-print('该方言的声调有：')
-print(toneList)
+# 预设方言声调排序
+presettone = ['55','44','45','53','21','13','31','35','24','33','22','51','5','3','2']
+toneList = diffFunc('声调', presettone, toneList)
 
 
 # 基本函数
@@ -88,9 +86,16 @@ def old_new(para, file, old_p, new_p, sortRule):
 
 print('--------------------------从中古看方言--------------------------')
 
+def alertFunc(txt, old_para, new_para):
+    diffList = list(set(showDialect(old_para)).difference(set(new_para)))
+    if(len(diffList) != 0):
+        print('==> 注意原数据多出以下中古'+ txt +'：')
+        print(diffList)
+
 # 预设中古声母排序
 oldfirstList = ['帮','滂','並','明','非','敷','奉','微','端','透','定','泥','来','知','彻','澄','精','清','从','心','邪','庄','初','崇','生','章','昌','船','书','禅','日','见','溪','群','疑','晓','匣','影','云','以']
 
+alertFunc('声母', 'old_first', oldfirstList)
 for i in oldfirstList:
     old_new(i, f_oldfist_first, 'old_first', 'first', listTodict(firstList))
 print('从中古声母看方言声母完成')
@@ -98,43 +103,35 @@ print('从中古声母看方言声母完成')
 # 预设中古韵母排序
 oldfinalList = ['果开一歌','果开三戈','果合一戈','果合三戈','假开二麻','假开三麻','假合二麻','遇合一模','遇合三鱼','遇合三虞','蟹开一咍','蟹开一泰','蟹开二皆','蟹开二佳','蟹开二夬','蟹开三祭','蟹开四齐','蟹合一灰','蟹合一泰','蟹合二皆','蟹合二佳','蟹合二夬','蟹合三祭','蟹合三废','蟹合四齐','止开三支','止开三脂','止开三之','止开三微','止合三支','止合三脂','止合三微','效开一豪','效开二肴','效开三宵','效开四萧','流开一侯','流开三尤','流开三幽','咸开一覃','咸开一合','咸开一谈','咸开一盍','咸开二咸','咸开二洽','咸开二衔','咸开二狎','咸开三盐','咸开三叶','咸开三严','咸开三业','咸开四添','咸开四帖','咸合三凡','咸合三乏','深开三侵','深开三缉','山开一寒','山开一曷','山开二山','山开二黠','山开二删','山开二鎋','山开三仙','山开三薛','山开三元','山开三月','山开四先','山开四屑','山合一桓','山合一末','山合二山','山合二黠','山合二删','山合二鎋','山合三仙','山合三薛','山合三元','山合三月','山合四先','山合四屑','臻开一痕','臻开三真','臻开三质','臻开三殷','臻开三迄','臻合一魂','臻合一没','臻合三谆','臻合三术','臻合三文','臻合三物','宕开一唐','宕开一铎','宕开三阳','宕开三药','宕合一唐','宕合一铎','宕合三阳','宕合三药','江开二江','江开二觉','曾开一登','曾开一德','曾开三蒸','曾开三职','曾合一登','曾合一德','曾合三职','梗开二庚','梗开二陌','梗开二耕','梗开二麦','梗开三庚','梗开三陌','梗开三清','梗开三昔','梗开四青','梗开四锡','梗合二庚','梗合二耕','梗合二麦','梗合三庚','梗合三清','梗合三昔','梗合四青','通合一东','通合一屋','通合一冬','通合一沃','通合三东','通合三屋','通合三锺','通合三烛']
 
-for i in oldfinalList:
+diffList = list(set(showDialect('old_final')).difference(set(oldfinalList)))
+if(len(diffList) != 0):
+    print('==> 注意有不存在预设排序中的中古韵母，目前排在后面：')
+    print(diffList)
+    for val in diffList:
+        if(len(val)<4): print('==> 注意有中古韵母录入不完整：' + val)
+
+for i in oldfinalList + diffList:
     old_new(i, f_oldfinal_final, 'old_final', 'final', listTodict(finalList))
 print('从中古韵母看方言韵母完成')
 
 # 预设中古声调排序
 oldtoneList = ['平','上','去','入']
 
+alertFunc('声调', 'old_tone', oldtoneList)
 for i in oldtoneList:
     old_new(i, f_oldtone_tone, 'old_tone', 'tone', listTodict(toneList))
 print('从中古声调看方言声调完成')
 
 print('--------------------------从方言看中古--------------------------')
 
-diffList = list(set(showDialect('old_first')).difference(set(oldfirstList)))
-if(len(diffList) != 0):
-    print('==> 注意原数据多出以下中古声母：')
-    print(diffList)
-
 for i in firstList:
     old_new(i, f_first_oldfist, 'first', 'old_first', listTodict(oldfirstList))
 print('从方言声母看中古声母完成')
 
 diffList = list(set(showDialect('old_final')).difference(set(oldfinalList)))
-if(len(diffList) != 0):
-    #print('==>注意原数据比生成报告多出以下中古韵母：')
-    #print(diffList)
-    for val in diffList:
-        if(len(val)<4): print('==> 注意有中古韵母录入不完整：' + val)
-
 for i in finalList:
     old_new(i, f_final_oldfinal, 'final', 'old_final', listTodict(oldfinalList + diffList))
 print('从方言韵母看中古韵母完成')
-
-diffList = list(set(showDialect('old_tone')).difference(set(oldtoneList)))
-if(len(diffList) != 0):
-    print('==> 注意原数据多出以下中古声调：')
-    print(diffList)
 
 for i in toneList:
     old_new(i, f_tone_oldtone, 'tone', 'old_tone', listTodict(oldtoneList))
