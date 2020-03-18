@@ -14,9 +14,25 @@ f_tone_oldtone = open('从方言声调看中古声调.txt', 'w', encoding='utf-8
 
 dictList = []
 
+def judgeFirst(first, num):
+    if(num == 1):
+        if(first in ['並','奉','定','澄','从','邪','崇','船','禅','群','匣']):
+            return '全浊'
+        elif(first in ['明','泥','来','娘','日','疑','以','云']):
+            return '次浊'
+        elif(first in ['滂','透','彻','清','初','昌','溪']):
+            return '次清'
+        else:
+            return '全清'
+    else:
+        if(first in ['並','奉','定','澄','从','邪','崇','船','禅','群','匣','明','泥','来','娘','日','疑','以','云']):
+            return '浊'
+        else:
+            return '清'
+
 for inx, line in enumerate(fdata):
     tempList = line.split('\t')
-    dictList.append({'char': tempList[1], 'first': tempList[3], 'final': tempList[4], 'tone': tempList[5], 'old_first': tempList[12].replace('\n',''), 'old_final': tempList[7]+tempList[8]+tempList[9]+tempList[11], 'old_tone': tempList[10]} )
+    dictList.append({'char': tempList[1], 'first': tempList[3], 'final': tempList[4], 'tone': tempList[5], 'old_first': tempList[12].replace('\n',''), 'old_final': tempList[7]+tempList[8]+tempList[9]+tempList[11], 'old_tone': tempList[10], 'old_tone2': judgeFirst(tempList[12].replace('\n',''),2) + tempList[10], 'old_tone3': judgeFirst(tempList[12].replace('\n',''),1) + tempList[10]} )
 
 def showDialect(para):
     dictList.sort(key=itemgetter(para))
@@ -35,9 +51,9 @@ def listTodict(intput):
 def diffFunc(txt, presetList, dataList):
     diffList = list(set(dataList).difference(set(presetList)))
     if(len(diffList) != 0):
-        print('==> 注意有不存在预设排序中的' + txt + '，目前排在后面：')
+        print('==> 注意有不存在预设排序中的' + txt + '，目前排在前面：')
         print(diffList)
-    sortRule = listTodict(presetList + diffList)
+    sortRule = listTodict(diffList + presetList )
     dataList = sorted(dataList, key=lambda x: sortRule[x])
     print('该方言的' + txt + '有：')
     print(dataList)
@@ -116,11 +132,23 @@ print('从中古韵母看方言韵母完成')
 
 # 预设中古声调排序
 oldtoneList = ['平','上','去','入']
+oldtone2List = ['清平','浊平','清上','浊上','清去','浊去','清入','浊入']
+oldtone3List = ['全清平','次清平','全浊平','次浊平','全清上','次清上','全浊上','次浊上','全清去','次清去','全浊去','次浊去','全清入','次清入','全浊入','次浊入']
 
 alertFunc('声调', 'old_tone', oldtoneList)
 for i in oldtoneList:
     old_new(i, f_oldtone_tone, 'old_tone', 'tone', listTodict(toneList))
+f_oldtone_tone.writelines('\n')
+alertFunc('声调', 'old_tone2', oldtone2List)
+for i in oldtone2List:
+    old_new(i, f_oldtone_tone, 'old_tone2', 'tone', listTodict(toneList))
+f_oldtone_tone.writelines('\n')
+alertFunc('声调', 'old_tone3', oldtone3List)
+for i in oldtone3List:
+    old_new(i, f_oldtone_tone, 'old_tone3', 'tone', listTodict(toneList))
+
 print('从中古声调看方言声调完成')
+
 
 print('--------------------------从方言看中古--------------------------')
 
@@ -135,7 +163,15 @@ print('从方言韵母看中古韵母完成')
 
 for i in toneList:
     old_new(i, f_tone_oldtone, 'tone', 'old_tone', listTodict(oldtoneList))
+f_tone_oldtone.writelines('\n')
+for i in toneList:
+    old_new(i, f_tone_oldtone, 'tone', 'old_tone2', listTodict(oldtone2List))
+f_tone_oldtone.writelines('\n')
+for i in toneList:
+    old_new(i, f_tone_oldtone, 'tone', 'old_tone3', listTodict(oldtone3List))
 print('从方言声调看中古声调完成')
+
+
 
 
 f_oldfist_first.close()
