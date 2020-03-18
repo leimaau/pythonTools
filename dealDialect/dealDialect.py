@@ -146,7 +146,6 @@ f_oldtone_tone.writelines('\n')
 alertFunc('声调', 'old_tone3', oldtone3List)
 for i in oldtone3List:
     old_new(i, f_oldtone_tone, 'old_tone3', 'tone', listTodict(toneList))
-
 print('从中古声调看方言声调完成')
 
 
