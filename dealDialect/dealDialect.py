@@ -12,8 +12,6 @@ f_first_oldfist = open('从方言声母看中古声母.txt', 'w', encoding='utf-
 f_final_oldfinal = open('从方言韵母看中古韵母.txt', 'w', encoding='utf-8')
 f_tone_oldtone = open('从方言声调看中古声调.txt', 'w', encoding='utf-8')
 
-dictList = []
-
 def judgeFirst(first, num):
     if(num == 1):
         if(first in ['並','奉','定','澄','从','邪','崇','船','禅','群','匣']):
@@ -30,6 +28,7 @@ def judgeFirst(first, num):
         else:
             return '清'
 
+dictList = []
 for inx, line in enumerate(fdata):
     tempList = line.split('\t')
     dictList.append({'char': tempList[1], 'first': tempList[3], 'final': tempList[4], 'tone': tempList[5], 'old_first': tempList[12].replace('\n',''), 'old_final': tempList[7]+tempList[8]+tempList[9]+tempList[11], 'old_tone': tempList[10], 'old_tone2': judgeFirst(tempList[12].replace('\n',''),2) + tempList[10], 'old_tone3': judgeFirst(tempList[12].replace('\n',''),1) + tempList[10]} )
@@ -53,29 +52,26 @@ def diffFunc(txt, presetList, dataList):
     if(len(diffList) != 0):
         print('==> 注意有不存在预设排序中的' + txt + '，目前排在前面：')
         print(diffList)
-    sortRule = listTodict(diffList + presetList )
+    sortRule = listTodict(diffList + presetList)
     dataList = sorted(dataList, key=lambda x: sortRule[x])
     print('该方言的' + txt + '有：')
     print(dataList)
     return dataList
 
 
-firstList = showDialect('first')
 # 预设方言声母排序
 presetfirst = ['p','ph','b','ɓ','m','f','v','t','th','d','ɗ','n','ɬ','l','ts','tsh','ʣ','s','z','tʂ','tʂh','dʐ','','ʂ','ʐ','tɕ','tɕh','ʥ','ɕ','ʑ','tʃ','ʧ','tʃh','ʧh','ȵ','ʃ','k','kh','ɡ','ŋ','h','∅']
-firstList = diffFunc('声母', presetfirst, firstList)
+firstList = diffFunc('声母', presetfirst, showDialect('first'))
 
 
-finalList = showDialect('final')
 # 预设方言韵母排序
 presetfinal = ['ɿ','i','u','y','a','ia','ua','ya','ɛ','iɛ','uɛ','yɛ','e','ie','ue','ye','ə','iə','uə','yə','œ','ø','ɔ','iɔ','uɔ','o','io','uo','ai','iai','uai','ɐi','iɐi','uɐi','ei','uei','ɔi','oi','ui','iui','au','iau','ɐu','iɐu','ɛu','iɛu','eu','ieu','ou','iou','iu','ɔu','am','iam','ɐm','iɐm','ɛm','iɛm','em','iem','əm','iəm','øm','ɔm','om','im','an','iɛn','uan','ɐn','iɐn','uɐn','ɛn','en','ien','ən','iən','øn','ɔn','iɔn','uɔn','on','ion','uon','in','un','iun','yn','aŋ','iaŋ','uaŋ','ɐŋ','uɐŋ','ɛŋ','iɛŋ','uɛŋ','eŋ','ieŋ','ueŋ','yeŋ','əŋ','iəŋ','uəŋ','yəŋ','iŋ','œŋ','iœŋ','øŋ','iøŋ','ɔŋ','iɔŋ','uɔŋ','oŋ','ioŋ','uoŋ','uŋ','iuŋ','ap','iap','ɐp','iɐp','ɛp','ep','əp','øp','ɔp','op','ip','at','uat','ɐt','iɐt','uɐt','ɛt','iɛt','uɛt','et','iet','uet','ət','øt','ɔt','iɔt','uɔt','ot','it','ut','iut','yt','ak','iak','uak','ɐk','iɐk','uɐk','ɛk','iɛk','uɛk','ek','iek','uek','œk','iœk','øk','iøk','ɔk','iɔk','uɔk','ok','iok','uok','uk','iuk','ŋ']
-finalList = diffFunc('韵母', presetfinal, finalList)
+finalList = diffFunc('韵母', presetfinal, showDialect('final'))
 
 
-toneList = showDialect('tone')
 # 预设方言声调排序
 presettone = ['55','44','45','53','21','13','31','35','24','33','22','51','5','3','2']
-toneList = diffFunc('声调', presettone, toneList)
+toneList = diffFunc('声调', presettone, showDialect('tone'))
 
 
 # 基本函数

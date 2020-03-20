@@ -1,5 +1,5 @@
 
-#coding=utf-8 
+# coding=utf-8 
 
 # 【本程序使用前提必须 xx1.txt、xx2.txt 等的单字完全一样，字数一样】
 
