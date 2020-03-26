@@ -120,6 +120,8 @@ def  jyutping_to_ipa(inputstr,area,ipatype):
     else:
         outputstr = outputstr.lower()
 
+    outputstr = re.sub(r'^([aeiou])',r'∅\1',outputstr)
+
     return outputstr
 
 

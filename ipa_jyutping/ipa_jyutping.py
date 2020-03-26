@@ -18,8 +18,8 @@ for paragraph in in_txt.readlines():
         #out_txt.write(prose)
         #out_txt.write('\t')
 
-        s = ipa_to_jyutping(prose,'p')   # area: n-南宁ipa  g-广州ipa  p-南宁平话《广西通志·汉语方言志》版IPA  p2-《南宁平话词典》版IPA
-        #s = jyutping_to_ipa(prose,'p',1)
+        #s = ipa_to_jyutping(prose,'p')   # area: n-南宁ipa  g-广州ipa  p-南宁平话《广西通志·汉语方言志》版IPA  p2-《南宁平话词典》版IPA
+        s = jyutping_to_ipa(prose,'p',1)
         out_txt.write(s+'\n')
         
 in_txt.close()
