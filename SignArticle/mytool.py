@@ -68,13 +68,13 @@ def  jyutping_to_ipa(inputstr,area,ipatype):
         outputstr = re.sub('w','β',outputstr)
         outputstr = re.sub('ɐ','ə',outputstr)
         outputstr = re.sub('œ','ø',outputstr)
-        outputstr = re.sub('ɛ','e',outputstr)
-        outputstr = re.sub('ɔ','o',outputstr)
+        outputstr = re.sub(r'ɛː|ɛ','e',outputstr)
+        outputstr = re.sub(r'ɔː|ɔ','o',outputstr)
         outputstr = re.sub(r'iə([ŋk])',r'iɐ\1',outputstr)
         outputstr = outputstr.replace('ɪ','e')
     elif area=='p':
-        outputstr = re.sub('ɔ','o',outputstr)
-        outputstr = re.sub(r'(ɛ|ɛː)(\d)',r'e\2',outputstr)
+        outputstr = re.sub(r'ɔː|ɔ','o',outputstr)
+        outputstr = re.sub(r'(ɛ|ɛː)(\d|ŋ|k|i)',r'e\2',outputstr)
         outputstr = outputstr.replace('ɪ','e')
     else:
         outputstr = outputstr
@@ -111,11 +111,12 @@ def  jyutping_to_ipa(inputstr,area,ipatype):
         outputstr = re.sub('5','˨˦',outputstr)
         outputstr = re.sub('6','˨˨',outputstr)
 
+    outputstr = outputstr.lower().replace('ɪ','e')
+    outputstr = outputstr.replace('ː','').replace('͡','').replace('̚','')
+
     if ipatype==0: 
-        outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','').replace('ɪ','e')
         outputstr = outputstr.lower().replace('˥','⁵').replace('˦','⁴').replace('˧','³').replace('˨','²').replace('˩','¹')
     elif ipatype==1:
-        outputstr = outputstr.lower().replace('ː','').replace('͡','').replace('̚','').replace('ɪ','e')
         outputstr = outputstr.lower().replace('˥','5').replace('˦','4').replace('˧','3').replace('˨','2').replace('˩','1')
     else:
         outputstr = outputstr.lower()
