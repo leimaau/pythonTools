@@ -129,6 +129,7 @@ def  jyutping_to_ipa(inputstr,area,ipatype):
 def  ipa_to_jyutping(inputstr,area):
 
     outputstr = inputstr
+    outputstr = outputstr.replace('ː','').replace('͡','').replace('̚','')
 
     if area=='n' or area=='g':
         outputstr = re.sub(r'˨˩|21|²¹|˩˩|11|¹¹','_4',outputstr)
@@ -137,9 +138,9 @@ def  ipa_to_jyutping(inputstr,area):
         outputstr = re.sub(r'˧˥|35|³⁵','_2',outputstr)
         outputstr = re.sub(r'˨˨|22|²²','_6',outputstr)
         outputstr = re.sub(r'˧˧|33|³³','_3',outputstr)
-        outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2|(?P<n4>[ptk])²',r'\g<n1>\g<n2>\g<n3>\g<n4>6',outputstr)
-        outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3|(?P<n4>[ptk])³',r'\g<n1>\g<n2>\g<n3>\g<n4>3',outputstr)
-        outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5|(?P<n4>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>\g<n4>1',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])˨|(?P<n2>[ptk])2|(?P<n3>[ptk])²',r'\g<n1>\g<n2>\g<n3>6',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])˧|(?P<n2>[ptk])3|(?P<n3>[ptk])³',r'\g<n1>\g<n2>\g<n3>3',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])˥|(?P<n2>[ptk])5|(?P<n3>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>1',outputstr)
     else:
         outputstr = re.sub(r'˨˩|21|²¹','_4',outputstr)
         outputstr = re.sub(r'˥˧|53|⁵³|˦˩|41|⁴¹','_1',outputstr)
@@ -147,13 +148,13 @@ def  ipa_to_jyutping(inputstr,area):
         outputstr = re.sub(r'˧˧|33|³³','_2',outputstr)
         outputstr = re.sub(r'˨˨|22|²²|˨˨˧|223|²²³','_6',outputstr)
         outputstr = re.sub(r'˥˥|55|⁵⁵','_3',outputstr)
-        outputstr = re.sub(r'(?P<n1>[ptk])̚˨|(?P<n2>[ptk])˨|(?P<n3>[ptk])2|(?P<n4>[ptk])²',r'\g<n1>\g<n2>\g<n3>\g<n4>6',outputstr)
-        outputstr = re.sub(r'(?P<n1>[ptk])̚˧|(?P<n2>[ptk])˧|(?P<n3>[ptk])3|(?P<n4>[ptk])³',r'\g<n1>\g<n2>\g<n3>\g<n4>2',outputstr)
-        outputstr = re.sub(r'(?P<n1>[ptk])̚˥|(?P<n2>[ptk])˥|(?P<n3>[ptk])5|(?P<n4>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>\g<n4>3',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])˨|(?P<n2>[ptk])2|(?P<n3>[ptk])²',r'\g<n1>\g<n2>\g<n3>6',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])˧|(?P<n2>[ptk])3|(?P<n3>[ptk])³',r'\g<n1>\g<n2>\g<n3>2',outputstr)
+        outputstr = re.sub(r'(?P<n1>[ptk])˥|(?P<n2>[ptk])5|(?P<n3>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>3',outputstr)
     
     outputstr = re.sub('_','',outputstr)
-    outputstr = re.sub(r't͡ʃʰ|t͡sʰ|tʃʰ|tsʰ|tʃh|tsh|ʧʰ|ʦʰ|ʧh|ʦh','c',outputstr)
-    outputstr = re.sub(r't͡ʃ|t͡s|tʃ|ts|ʧ|ʦ','z',outputstr)
+    outputstr = re.sub(r'tʃʰ|tsʰ|tʃh|tsh|ʧʰ|ʦʰ|ʧh|ʦh','c',outputstr)
+    outputstr = re.sub(r'tʃ|ts|ʧ|ʦ','z',outputstr)
     outputstr = re.sub(r'ʃ|s','s',outputstr)
 
     if area=='n' or area=='g':
@@ -164,7 +165,6 @@ def  ipa_to_jyutping(inputstr,area):
 
     outputstr = re.sub(r'^([yi])([mnptk])(\d)',r'j\1\2\3',outputstr)
     outputstr = re.sub(r'^([yi])(\d)',r'j\1\2',outputstr)
-    outputstr = re.sub('uː','u',outputstr)
 
     outputstr = re.sub(r'kʷʰ|kʰʷ|kwh|khw|kʰu|khu','Kw',outputstr)
     outputstr = re.sub(r'kʷ|kw|ku','gw',outputstr)
@@ -178,16 +178,15 @@ def  ipa_to_jyutping(inputstr,area):
     outputstr = re.sub(r'(^|[ /])(th|tʰ)',r'\1t',outputstr)
     outputstr = re.sub(r'(^|[ /])(kh|kʰ)',r'\1k',outputstr)
 
-    outputstr = re.sub(r'aː|a','aa',outputstr)
+    outputstr = re.sub('a','aa',outputstr)
     outputstr = re.sub(r'ɐ|ə','a',outputstr)
 
-    outputstr = re.sub(r'(ɔː|ɔ)',r'o',outputstr)
+    outputstr = re.sub('ɔ','o',outputstr)
 
     outputstr = re.sub(r'eŋ|ɪŋ','ing',outputstr)
     outputstr = re.sub(r'ek|ɪk','ik',outputstr)
-    outputstr = re.sub(r'iː','i',outputstr)
-    outputstr = re.sub(r'ɛː|ɛ','e',outputstr)
-    outputstr = re.sub(r'œː|œ|øː|ø','oe',outputstr)
+    outputstr = re.sub('ɛ','e',outputstr)
+    outputstr = re.sub(r'œ|ø','oe',outputstr)
 
     outputstr = re.sub('ɵy','eoi',outputstr)
     outputstr = re.sub('ɵ','eo',outputstr)
@@ -198,7 +197,7 @@ def  ipa_to_jyutping(inputstr,area):
 
     outputstr = re.sub(r'm̩|m̍','m',outputstr)
     outputstr = re.sub(r'ŋ̩|ŋ̍|ŋ|ŋ̇','ng',outputstr)
-    outputstr = re.sub(r'yː|y','yu',outputstr)
+    outputstr = re.sub('y','yu',outputstr)
     outputstr = re.sub('ɿ','y',outputstr)
     outputstr = re.sub(r'^[ʔ∅0Ø]','',outputstr)
 
