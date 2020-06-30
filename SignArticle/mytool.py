@@ -115,11 +115,11 @@ def  jyutping_to_ipa(inputstr,area,ipatype):
     outputstr = outputstr.replace('ː','').replace('͡','').replace('̚','')
 
     if ipatype==0: 
-        outputstr = outputstr.lower().replace('˥','⁵').replace('˦','⁴').replace('˧','³').replace('˨','²').replace('˩','¹')
+        outputstr = outputstr.replace('˥','⁵').replace('˦','⁴').replace('˧','³').replace('˨','²').replace('˩','¹')
     elif ipatype==1:
-        outputstr = outputstr.lower().replace('˥','5').replace('˦','4').replace('˧','3').replace('˨','2').replace('˩','1')
+        outputstr = outputstr.replace('˥','5').replace('˦','4').replace('˧','3').replace('˨','2').replace('˩','1')
     else:
-        outputstr = outputstr.lower()
+        outputstr = outputstr.replace('˥˥','˥').replace('˧˧','˧').replace('˨˨','˨')
 
     outputstr = re.sub(r'^([aeiouœʊɐɛɪ])',r'∅\1',outputstr)
 
