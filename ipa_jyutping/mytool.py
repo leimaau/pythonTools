@@ -141,6 +141,9 @@ def  ipa_to_jyutping(inputstr,area):
         outputstr = re.sub(r'(?P<n1>[ptk])˨|(?P<n2>[ptk])2|(?P<n3>[ptk])²',r'\g<n1>\g<n2>\g<n3>6',outputstr)
         outputstr = re.sub(r'(?P<n1>[ptk])˧|(?P<n2>[ptk])3|(?P<n3>[ptk])³',r'\g<n1>\g<n2>\g<n3>3',outputstr)
         outputstr = re.sub(r'(?P<n1>[ptk])˥|(?P<n2>[ptk])5|(?P<n3>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>1',outputstr)
+        outputstr = re.sub('˥','_1',outputstr)
+        outputstr = re.sub('˧','_3',outputstr)
+        outputstr = re.sub('˨','_6',outputstr)
     else:
         outputstr = re.sub(r'˨˩|21|²¹','_4',outputstr)
         outputstr = re.sub(r'˥˧|53|⁵³|˦˩|41|⁴¹','_1',outputstr)
@@ -151,6 +154,9 @@ def  ipa_to_jyutping(inputstr,area):
         outputstr = re.sub(r'(?P<n1>[ptk])˨|(?P<n2>[ptk])2|(?P<n3>[ptk])²',r'\g<n1>\g<n2>\g<n3>6',outputstr)
         outputstr = re.sub(r'(?P<n1>[ptk])˧|(?P<n2>[ptk])3|(?P<n3>[ptk])³',r'\g<n1>\g<n2>\g<n3>2',outputstr)
         outputstr = re.sub(r'(?P<n1>[ptk])˥|(?P<n2>[ptk])5|(?P<n3>[ptk])⁵',r'\g<n1>\g<n2>\g<n3>3',outputstr)
+        outputstr = re.sub('˥','_3',outputstr)
+        outputstr = re.sub('˧','_2',outputstr)
+        outputstr = re.sub('˨','_6',outputstr)
     
     outputstr = re.sub('_','',outputstr)
     outputstr = re.sub(r'tʃʰ|tsʰ|tʃh|tsh|ʧʰ|ʦʰ|ʧh|ʦh','c',outputstr)
