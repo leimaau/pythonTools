@@ -121,7 +121,7 @@ def  jyutping_to_ipa(inputstr,area,ipatype):
     else:
         outputstr = outputstr.replace('˥˥','˥').replace('˧˧','˧').replace('˨˨','˨')
 
-    outputstr = re.sub(r'^([aeiouœʊɐɛɪ])',r'∅\1',outputstr)
+    outputstr = re.sub(r'^([aeiouœʊɐɛɪɔ])',r'∅\1',outputstr)
 
     return outputstr
 
