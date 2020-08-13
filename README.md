@@ -3,19 +3,10 @@
 ### 1.simp_trad
 繁简转换
 
-### 2.ipa_jyutping
-ipa与jyutping相互转换
-
-### 3.SignArticle
-给文本标注jyutping和ipa
-
-### 4.InferDialect
-由中古音推导方音
-
-### 5.handleMaterial
+### 2.handleMaterial
 材料组织整理
 
-### 6.dealDialect
+### 3.dealDialect
 古韵与方言对照表
 
 ## 第三方库
