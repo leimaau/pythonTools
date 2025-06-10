@@ -1,7 +1,8 @@
 import re
 from opencc import OpenCC
-cc = OpenCC('t2s')
+#cc = OpenCC('t2s')
 cc2 = OpenCC('s2t')
+#cc3 = OpenCC('tw2t')
 
 article = open('input.txt', encoding='utf-8')
 out = open('output.txt', 'w', encoding='utf-8')
@@ -20,6 +21,9 @@ for paragraph in article.readlines():
         #out.write(s+'\n')
         s2 = cc2.convert(prose.replace('<space>',' '))
         out.write(s2+'\n')
+
+        #s3 = cc3.convert(prose.replace('<space>',' '))
+        #out.write(s3+'\n')
 
 article.close()
 out.close()

@@ -1,0 +1,22 @@
+{
+  "name": "Phrase to Jyutping",
+  "segmentation": {
+    "type": "mmseg",
+    "dict": {
+      "type": "txt",
+      "file": "jyutPhrases.txt"
+    }
+  },
+  "conversion_chain": [{
+    "dict": {
+      "type": "group",
+      "dicts": [{
+        "type": "txt",
+        "file": "jyutPhrases.txt"
+      }, {
+        "type": "txt",
+        "file": "jyutCharacters.txt"
+      }]
+    }
+  }]
+}
